@@ -1,11 +1,59 @@
-const { javascript } = require("projen");
+const { javascript } = require('projen')
+const { exec } = require('projen/lib/util')
 const project = new javascript.NodeProject({
-  defaultReleaseBranch: "main",
-  name: "eslint-config-valian",
+  packageName: '@valian/eslint-config',
+  description: 'Valian ESLint Config',
+  repository: 'https://github.com/valian-ca/eslint-config.git',
 
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
-});
-project.synth();
+  authorName: 'Valian',
+  authorUrl: 'https://valian.ca',
+  authorOrganization: true,
+
+  license: 'MIT',
+  licensed: true,
+  copyrightOwner: 'Valian',
+
+  keywords: ['eslint'],
+
+  releaseToNpm: true,
+  defaultReleaseBranch: 'main',
+  entrypoint: 'index.js',
+
+  prettier: true,
+  prettierOptions: { settings: { semi: false, singleQuote: true, printWidth: 120 } },
+  github: true,
+  eslint: true,
+  jest: false,
+
+  deps: [
+    '@typescript-eslint/eslint-plugin',
+    '@typescript-eslint/parser',
+    'eslint-import-resolver-typescript',
+
+    'eslint-config-airbnb-base',
+    'eslint-config-airbnb',
+    'eslint-config-airbnb-typescript',
+
+    'eslint-config-prettier',
+    'eslint-plugin-eslint-comments',
+    'eslint-plugin-n',
+    'eslint-plugin-promise',
+    'eslint-plugin-unicorn',
+
+    'eslint-plugin-import',
+    'eslint-plugin-simple-import-sort',
+
+    'eslint-plugin-jsx-a11y',
+    'eslint-plugin-react',
+    'eslint-plugin-react-hooks',
+
+    'eslint-plugin-jest',
+    'eslint-plugin-jest-formatting',
+  ],
+})
+project.addPeerDeps('eslint@>=8.40.0')
+project.addPeerDeps('typescript@>=4.9.5')
+
+const eslintTask = project.addTask('eslint', { description: 'Run eslint', exec: 'eslint .' })
+
+project.synth()
