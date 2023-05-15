@@ -1,0 +1,65 @@
+repository:
+  description: Valian ESLint Config
+  topics: eslint
+
+  default_branch: main
+
+  has_issues: true
+  has_wiki: false
+  has_downloads: false
+  has_projects: false
+
+  allow_squash_merge: true
+  allow_merge_commit: true
+  allow_rebase_merge: false
+  allow_auto_merge: true
+  delete_branch_on_merge: true
+
+  enable_automated_security_fixes: true
+  enable_vulnerability_alerts: true
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: bug
+    color: '#cc0000'
+    description: Something is broken
+  - name: feature
+    color: '#336699'
+    description: New functionality
+  - name: chore
+    color: '#f2df8c'
+    description: Repository or code maintenance
+  - name: documentation
+    color: '#6cb524'
+    description: Change in the documentation
+
+teams:
+  - name: valian    permission: admin
+
+branches:
+  - name: main
+    # https://docs.github.com/en/rest/reference/repos#update-branch-protection
+    # Branch Protection settings. Set to null to disable
+    protection:
+      # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
+      required_pull_request_reviews:
+        # The number of approvals required. (1-6)
+        required_approving_review_count: 1
+        # Dismiss approved reviews automatically when a new commit is pushed.
+        dismiss_stale_reviews: false
+        # Blocks merge until code owners have reviewed.
+        require_code_owner_reviews: true
+        # Specify which users and teams can dismiss pull request reviews. Pass an empty dismissal_restrictions object to disable. User and team dismissal_restrictions are only available for organization-owned repositories. Omit this parameter for personal repositories.
+        dismissal_restrictions: {}
+      # Required. Require status checks to pass before merging. Set to null to disable
+      required_status_checks:
+        # Required. Require branches to be up to date before merging.
+        strict: false
+        # Required. The list of status checks to require in order to merge into this branch
+      # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
+      enforce_admins: true
+      # Prevent merge commits from being pushed to matching branches
+      required_linear_history: true
+      required_signatures: true
+      # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
+      restrictions: null

@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:react-hooks/recommended', 'plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react-hooks/recommended', 'plugin:react/recommended', 'plugin:react/jsx-runtime', 'airbnb'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
