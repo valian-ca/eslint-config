@@ -4,6 +4,9 @@ const project = new javascript.NodeProject({
   description: 'Valian ESLint Config',
   repository: 'https://github.com/valian-ca/eslint-config.git',
 
+  minNodeVersion: '16.x',
+  workflowNodeVersion: 'lts/hydrogen',
+
   authorName: 'Valian',
   authorUrl: 'https://valian.ca',
   authorOrganization: true,
