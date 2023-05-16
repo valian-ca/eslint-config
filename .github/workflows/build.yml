@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: lts/hydrogen
       - name: Install dependencies
-        run: yarn install --check-files
+        run: npm install
       - name: build
         run: npx projen build
       - name: Find mutations

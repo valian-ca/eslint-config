@@ -21,6 +21,7 @@ const project = new javascript.NodeProject({
   npmAccess: 'public',
   defaultReleaseBranch: 'main',
   entrypoint: 'index.js',
+  packageManager: javascript.NodePackageManager.NPM,
 
   prettier: true,
   prettierOptions: { settings: { semi: false, singleQuote: true, printWidth: 120 } },
