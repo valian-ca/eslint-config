@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: lts/hydrogen
       - name: Install dependencies
-        run: yarn install --check-files --frozen-lockfile
+        run: npm ci
       - name: release
         run: npx projen release
       - name: Check for new commits
