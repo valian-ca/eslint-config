@@ -63,6 +63,9 @@
   "keywords": [
     "eslint"
   ],
+  "engines": {
+    "node": ">= 16.x"
+  },
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
