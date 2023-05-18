@@ -2,7 +2,7 @@ const { javascript, release } = require('projen')
 const project = new javascript.NodeProject({
   packageName: '@valian/eslint-config',
   description: 'Valian ESLint Config',
-  repository: 'https://github.com/valian-ca/eslint-config.git',
+  repository: 'git+https://github.com/valian-ca/eslint-config.git',
 
   minNodeVersion: '16.x',
   workflowNodeVersion: 'lts/hydrogen',
@@ -28,8 +28,7 @@ const project = new javascript.NodeProject({
   eslint: true,
   jest: false,
 
-  prerelease: 'beta',
-
+  peerDeps: ['eslint@>=8.40.0', 'typescript@>=4.9.5'],
   deps: [
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
@@ -55,10 +54,15 @@ const project = new javascript.NodeProject({
     'eslint-plugin-jest',
     'eslint-plugin-jest-formatting',
   ],
+
+  devDeps: ['@commitlint/cli', '@commitlint/config-conventional', 'husky', 'markdownlint-cli', 'prettier'],
 })
-project.addPeerDeps('eslint@>=8.40.0')
-project.addPeerDeps('typescript@>=4.9.5')
 
 project.addTask('eslint', { description: 'Run eslint', exec: 'eslint .' })
+project.addTask('lint:md', { description: 'Run markdownlint', exec: 'markdownlint *.md' })
+project.addTask('lint:prettier', { description: 'check prettier format', exec: 'prettier . --check' })
+project.addTask('prepare', { exec: 'husky install' })
+
+project.prettier?.ignoreFile?.addPatterns('.github', '.mergify.yml')
 
 project.synth()
