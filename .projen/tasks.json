@@ -125,6 +125,24 @@
         }
       ]
     },
+    "lint:md": {
+      "name": "lint:md",
+      "description": "Run markdownlint",
+      "steps": [
+        {
+          "exec": "markdownlint *.md"
+        }
+      ]
+    },
+    "lint:prettier": {
+      "name": "lint:prettier",
+      "description": "check prettier format",
+      "steps": [
+        {
+          "exec": "prettier . --check"
+        }
+      ]
+    },
     "package": {
       "name": "package",
       "description": "Creates the distribution package",
@@ -149,12 +167,19 @@
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
     },
+    "prepare": {
+      "name": "prepare",
+      "steps": [
+        {
+          "exec": "husky install"
+        }
+      ]
+    },
     "release": {
       "name": "release",
       "description": "Prepare a release from \"main\" branch",
       "env": {
-        "RELEASE": "true",
-        "PRERELEASE": "beta"
+        "RELEASE": "true"
       },
       "steps": [
         {

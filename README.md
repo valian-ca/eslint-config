@@ -1,11 +1,15 @@
+<!-- markdownlint-disable -->
+
 [![npm version](http://img.shields.io/npm/v/@valian/eslint-config.svg?style=flat)](https://npmjs.org/package/@valian/eslint-config 'View this project on npm')
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
+<!-- markdownlint-restore -->
 
 # eslint-config
 
 Sharable eslint config created and used by [Valian](https://valian.ca)
 
-## eslint plugins and config used 
+## eslint plugins and config used
 
 ### Base configuration
 
@@ -24,7 +28,8 @@ Sharable eslint config created and used by [Valian](https://valian.ca)
 ### Node Typescript App
 
 - [`eslint-plugin-n`](https://www.npmjs.com/package/eslint-plugin-n)
-- 
+-
+
 ### React Typescript App
 
 - [`eslint-plugin-jsx-a11y`](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
@@ -33,17 +38,17 @@ Sharable eslint config created and used by [Valian](https://valian.ca)
 
 ## Usage
 
-```
+```sh
 yarn add -D eslint @valian/eslint-config
 ```
 
 or
 
-```
+```sh
 npm install --save-dev eslint @valian/eslint-config
 ```
 
-## Node Typescript App
+## Node Typescript App Configuration
 
 Add `.eslintrc.js`:
 
@@ -56,11 +61,11 @@ module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
-  }
+  },
 }
 ```
 
-## React Typescript App
+## React Typescript App Configuration
 
 Add `.eslintrc.js`:
 
