@@ -2,18 +2,35 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
-      parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
-    },
-    {
-      files: ['tests/**', '__tests__/**', '*.test.ts', '*.test.tsx', '*.spec.ts', '*.spec.tsx'],
       rules: {
-        '@typescript-eslint/unbound-method': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            argsIgnorePattern: '^_',
+            caughtErrorsIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+          },
+        ],
       },
+
+      overrides: [
+        {
+          files: ['tests/**', '__tests__/**', '*.test.ts', '*.test.tsx', '*.spec.ts', '*.spec.tsx'],
+          rules: {
+            '@typescript-eslint/no-unsafe-argument': 'off',
+            '@typescript-eslint/no-unsafe-assignment': 'off',
+            '@typescript-eslint/no-unsafe-member-access': 'off',
+            '@typescript-eslint/unbound-method': 'off',
+          },
+        },
+      ],
     },
   ],
 }
