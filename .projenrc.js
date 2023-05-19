@@ -17,6 +17,8 @@ const project = new javascript.NodeProject({
 
   keywords: ['eslint'],
 
+  gitignore: ['.idea'],
+
   releaseToNpm: true,
   npmAccess: 'public',
   defaultReleaseBranch: 'main',
