@@ -20,6 +20,7 @@ module.exports = {
 
     'unicorn/catch-error-name': 'off',
     'unicorn/no-array-for-each': 'off',
+    'unicorn/no-array-reduce': 'off',
     'unicorn/no-negated-condition': 'off',
     'unicorn/no-null': 'off',
     'unicorn/prefer-module': 'off',
