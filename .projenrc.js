@@ -30,6 +30,9 @@ const project = new javascript.NodeProject({
   eslint: true,
   jest: false,
 
+  depsUpgrade: false,
+  renovatebot: true,
+
   peerDeps: ['eslint@>=8.40.0', 'typescript@>=4.9.5'],
   deps: [
     '@typescript-eslint/eslint-plugin',
@@ -65,6 +68,6 @@ project.addTask('lint:md', { description: 'Run markdownlint', exec: 'markdownlin
 project.addTask('lint:prettier', { description: 'check prettier format', exec: 'prettier . --check' })
 project.addTask('prepare', { exec: 'husky install' })
 
-project.prettier?.ignoreFile?.addPatterns('.github', '.mergify.yml')
+project.prettier?.ignoreFile?.addPatterns('.github', '.mergify.yml', 'renovate.json5')
 
 project.synth()
