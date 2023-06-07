@@ -18,6 +18,12 @@ module.exports = {
             varsIgnorePattern: '^_',
           },
         ],
+
+        '@typescript-eslint/switch-exhaustiveness-check': 'error',
+        'default-case': 'off',
+
+        // https://typescript-eslint.io/blog/consistent-type-imports-and-exports-why-and-how/
+        '@typescript-eslint/consistent-type-imports': 'error',
       },
 
       overrides: [
