@@ -4,7 +4,8 @@ module.exports = {
     './rules/typescript',
     './rules/jest',
     './rules/node',
-    './rules/airbnb-overrides.js',
+    './rules/airbnb-overrides',
+    './rules/restricted-imports',
     './rules/prettier',
   ].map(require.resolve),
 }
