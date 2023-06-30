@@ -32,7 +32,9 @@ module.exports = {
     {
       extends: ['plugin:import/typescript', 'airbnb-typescript/base'],
       files: ['*.ts', '*.tsx'],
-      rules: {},
+      rules: {
+        'import/no-duplicates': ['error', { 'prefer-inline': true }],
+      },
     },
     {
       files: ['.eslintrc.js'],

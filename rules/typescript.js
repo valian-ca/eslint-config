@@ -24,6 +24,8 @@ module.exports = {
 
         // https://typescript-eslint.io/blog/consistent-type-imports-and-exports-why-and-how/
         '@typescript-eslint/consistent-type-imports': 'error',
+
+        '@typescript-eslint/restrict-template-expressions': ['error', { allowNullish: true }],
       },
 
       overrides: [

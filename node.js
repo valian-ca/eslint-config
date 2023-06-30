@@ -6,6 +6,7 @@ module.exports = {
     './rules/node',
     './rules/airbnb-overrides',
     './rules/restricted-imports',
+    './rules/import-sort',
     './rules/prettier',
   ].map(require.resolve),
 }
