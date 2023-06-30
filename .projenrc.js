@@ -32,6 +32,16 @@ const project = new javascript.NodeProject({
 
   depsUpgrade: false,
   renovatebot: true,
+  renovatebotOptions: {
+    overrideConfig: {
+      packageRules: [
+        {
+          matchUpdateTypes: ['patch', 'minor'],
+          groupName: 'dependencies (non-major)',
+        },
+      ],
+    },
+  },
 
   peerDeps: ['eslint@>=8.40.0', 'typescript@>=4.9.5'],
   deps: [
