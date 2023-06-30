@@ -36,8 +36,16 @@ const project = new javascript.NodeProject({
     overrideConfig: {
       packageRules: [
         {
+          matchPackagePatterns: ['.*'],
+          groupName: 'dependencies',
+        },
+        {
           matchUpdateTypes: ['patch', 'minor'],
           groupName: 'dependencies (non-major)',
+        },
+        {
+          matchManagers: ['github-actions'],
+          groupName: 'GitHub Actions Dependencies',
         },
       ],
     },
