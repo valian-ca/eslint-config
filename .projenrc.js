@@ -51,7 +51,7 @@ const project = new javascript.NodeProject({
     },
   },
 
-  peerDeps: ['eslint@>=8.40.0', 'typescript@>=4.9.5'],
+  peerDeps: ['eslint@>=8.45.0', 'typescript@>=4.9.5'],
   deps: [
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
