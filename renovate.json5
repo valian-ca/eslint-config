@@ -32,8 +32,9 @@
     }
   ],
   "ignoreDeps": [
-    "standard-version",
     "eslint",
+    "npm-check-updates",
+    "standard-version",
     "typescript",
     "projen"
   ]
