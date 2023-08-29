@@ -17,11 +17,13 @@
     "lint:prettier": "npx projen lint:prettier",
     "package": "npx projen package",
     "post-compile": "npx projen post-compile",
+    "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
     "prepare": "npx projen prepare",
     "release": "npx projen release",
     "test": "npx projen test",
     "unbump": "npx projen unbump",
+    "upgrade": "npx projen upgrade",
     "projen": "npx projen"
   },
   "author": {
@@ -30,13 +32,14 @@
     "organization": true
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "eslint": "8.45.0",
     "husky": "^8.0.3",
     "markdownlint-cli": "^0.35.0",
-    "prettier": "^3.0.0",
-    "projen": "^0.71.141",
+    "npm-check-updates": "^16",
+    "prettier": "^3.0.2",
+    "projen": "^0.72.15",
     "standard-version": "^9",
     "typescript": "4.9.5"
   },
@@ -45,24 +48,24 @@
     "typescript": ">=4.9.5"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-import-resolver-typescript": "^3.6.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-jest": "^27.2.3",
     "eslint-plugin-jest-formatting": "^3.1.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-unicorn": "^48.0.0"
+    "eslint-plugin-unicorn": "^48.0.1"
   },
   "keywords": [
     "eslint"

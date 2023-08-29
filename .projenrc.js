@@ -30,7 +30,10 @@ const project = new javascript.NodeProject({
   eslint: true,
   jest: false,
 
-  depsUpgrade: false,
+  depsUpgrade: true,
+  depsUpgradeOptions: {
+    workflow: false,
+  },
   renovatebot: true,
   renovatebotOptions: {
     overrideConfig: {
