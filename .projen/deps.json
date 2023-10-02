@@ -10,7 +10,7 @@
     },
     {
       "name": "eslint",
-      "version": "8.45.0",
+      "version": "8.50.0",
       "type": "build"
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "name": "eslint",
-      "version": ">=8.45.0",
+      "version": ">=8.50.0",
       "type": "peer"
     },
     {
