@@ -32,6 +32,7 @@
     }
   ],
   "ignoreDeps": [
+    "constructs",
     "npm-check-updates",
     "standard-version",
     "eslint",
