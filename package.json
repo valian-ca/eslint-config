@@ -37,7 +37,7 @@
     "constructs": "^10.0.0",
     "eslint": "8.50.0",
     "husky": "^8.0.3",
-    "markdownlint-cli": "^0.37.0",
+    "markdownlint-cli": "^0.38.0",
     "npm-check-updates": "^16",
     "prettier": "^3.1.0",
     "projen": "^0.76.27",
