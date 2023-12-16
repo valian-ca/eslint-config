@@ -5,7 +5,7 @@
   ],
   "extends": [
     ":preserveSemverRanges",
-    "config:base",
+    "config:recommended",
     "group:allNonMajor",
     "group:recommended",
     "group:monorepos"
@@ -33,7 +33,6 @@
   ],
   "ignoreDeps": [
     "constructs",
-    "npm-check-updates",
     "standard-version",
     "eslint",
     "typescript",
