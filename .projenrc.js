@@ -4,7 +4,7 @@ const project = new javascript.NodeProject({
   description: 'Valian ESLint Config',
   repository: 'git+https://github.com/valian-ca/eslint-config.git',
 
-  minNodeVersion: '16.x',
+  minNodeVersion: '18.x',
   workflowNodeVersion: 'lts/hydrogen',
 
   authorName: 'Valian',
@@ -54,7 +54,7 @@ const project = new javascript.NodeProject({
     },
   },
 
-  peerDeps: ['eslint@>=8.50.0', 'typescript@>=4.9.5'],
+  peerDeps: ['eslint@>=8.55.0', 'typescript@>=5.2.2'],
   deps: [
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
