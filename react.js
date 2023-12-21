@@ -9,8 +9,4 @@ module.exports = {
     './rules/import-sort',
     './rules/prettier',
   ].map(require.resolve),
-
-  rules: {
-    'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
-  },
 }
