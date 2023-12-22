@@ -54,7 +54,7 @@ const project = new javascript.NodeProject({
     },
   },
 
-  peerDeps: ['eslint@>=8.55.0', 'typescript@>=5.2.2'],
+  peerDeps: ['eslint@>=8.56.0', 'typescript@>=5.2.2'],
   deps: [
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
@@ -76,6 +76,7 @@ const project = new javascript.NodeProject({
     'eslint-plugin-jsx-a11y',
     'eslint-plugin-react',
     'eslint-plugin-react-hooks',
+    'eslint-plugin-react-refresh',
 
     'eslint-plugin-jest',
     'eslint-plugin-jest-formatting',

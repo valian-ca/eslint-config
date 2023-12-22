@@ -3,6 +3,7 @@ module.exports = {
 
   rules: {
     'react/jsx-props-no-spreading': 'off',
+    'react/prop-types': 'off',
     'react/require-default-props': 'off',
 
     'react/function-component-definition': [
@@ -12,6 +13,8 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+
+    'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
   },
 
   overrides: [
@@ -19,6 +22,15 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
 
       extends: ['airbnb-typescript'],
+      rules: {
+        '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { attributes: false } }],
+      },
+    },
+    {
+      files: ['*.d.ts'],
+      rules: {
+        'unicorn/filename-case': ['error', { cases: { kebabCase: true } }],
+      },
     },
   ],
 }
