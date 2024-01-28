@@ -37,7 +37,7 @@
     "constructs": "^10.0.0",
     "eslint": "8.56.0",
     "husky": "^8.0.3",
-    "markdownlint-cli": "^0.38.0",
+    "markdownlint-cli": "^0.39.0",
     "prettier": "^3.2.2",
     "projen": "^0.79.0",
     "standard-version": "^9",
