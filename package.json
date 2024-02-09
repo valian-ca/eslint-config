@@ -32,24 +32,24 @@
     "organization": true
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.4",
-    "@commitlint/config-conventional": "^18.4.4",
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
     "constructs": "^10.0.0",
     "eslint": "8.56.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.10",
     "markdownlint-cli": "^0.39.0",
-    "prettier": "^3.2.2",
-    "projen": "^0.79.0",
+    "prettier": "^3.2.5",
+    "projen": "^0.79.9",
     "standard-version": "^9",
-    "typescript": "5.2.2"
+    "typescript": "5.3.3"
   },
   "peerDependencies": {
     "eslint": ">=8.56.0",
-    "typescript": ">=5.2.2"
+    "typescript": ">=5.3.3"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -65,8 +65,8 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-unicorn": "^50.0.1"
+    "eslint-plugin-simple-import-sort": "^11.0.0",
+    "eslint-plugin-unicorn": "^51.0.1"
   },
   "keywords": [
     "eslint"
