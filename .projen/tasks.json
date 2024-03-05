@@ -227,13 +227,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@commitlint/cli,@commitlint/config-conventional,constructs,husky,markdownlint-cli,prettier,projen,standard-version,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-airbnb,eslint-config-airbnb-base,eslint-config-airbnb-typescript,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-eslint-comments,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-jest-formatting,eslint-plugin-jsx-a11y,eslint-plugin-n,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-simple-import-sort,eslint-plugin-unicorn"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@commitlint/cli,@commitlint/config-conventional,husky,markdownlint-cli,prettier,projen,eslint,typescript,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-airbnb,eslint-config-airbnb-base,eslint-config-airbnb-typescript,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-eslint-comments,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-jest-formatting,eslint-plugin-jsx-a11y,eslint-plugin-n,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-simple-import-sort,eslint-plugin-unicorn"
         },
         {
           "exec": "npm install"
         },
         {
-          "exec": "npm update @commitlint/cli @commitlint/config-conventional constructs husky markdownlint-cli prettier projen standard-version @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-base eslint-config-airbnb-typescript eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-jest eslint-plugin-jest-formatting eslint-plugin-jsx-a11y eslint-plugin-n eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-simple-import-sort eslint-plugin-unicorn"
+          "exec": "npm update @commitlint/cli @commitlint/config-conventional constructs husky markdownlint-cli prettier projen standard-version eslint typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-base eslint-config-airbnb-typescript eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-jest eslint-plugin-jest-formatting eslint-plugin-jsx-a11y eslint-plugin-n eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-simple-import-sort eslint-plugin-unicorn"
         },
         {
           "exec": "npx projen"
