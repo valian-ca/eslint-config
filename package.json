@@ -72,7 +72,7 @@
     "eslint"
   ],
   "engines": {
-    "node": ">= 18.x"
+    "node": ">= 20.x"
   },
   "main": "index.js",
   "license": "MIT",
