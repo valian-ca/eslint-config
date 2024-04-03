@@ -36,12 +36,12 @@
     },
     {
       "name": "eslint",
-      "version": ">=8.56.0",
+      "version": ">=8.57.0",
       "type": "peer"
     },
     {
       "name": "typescript",
-      "version": ">=5.3.3",
+      "version": ">=5.4.3",
       "type": "peer"
     },
     {
