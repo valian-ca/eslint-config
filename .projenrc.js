@@ -18,6 +18,18 @@ const project = new javascript.NodeProject({
   keywords: ['eslint'],
 
   gitignore: ['.idea'],
+  npmIgnoreOptions: {
+    ignorePatterns: [
+      '.github/*',
+      '.editorconfig',
+      '.eslintrc.js',
+      '.husky/*',
+      '.markdownlint.yml',
+      '.nvmrc',
+      'commitlint.config.js',
+      'renovate.json5',
+    ],
+  },
 
   releaseToNpm: true,
   npmAccess: 'public',
@@ -54,7 +66,7 @@ const project = new javascript.NodeProject({
     },
   },
 
-  peerDeps: ['eslint@>=8.57.0', 'typescript@>=5.4.3'],
+  peerDeps: ['eslint@>=8.57.0', 'typescript@>=5.4.5'],
   deps: [
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
