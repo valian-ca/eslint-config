@@ -2,7 +2,7 @@
 .github/*
 .editorconfig
 .eslintrc.js
-.husky/
+.husky/*
 .markdownlint.yml
 .nvmrc
 commitlint.config.js
