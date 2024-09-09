@@ -32,10 +32,11 @@
     }
   ],
   "ignoreDeps": [
+    "commit-and-tag-version",
     "constructs",
-    "standard-version",
     "eslint",
     "typescript",
+    "eslint-plugin-react-hooks",
     "projen"
   ]
 }

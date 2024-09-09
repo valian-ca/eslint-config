@@ -1,4 +1,4 @@
-const { javascript, release } = require('projen')
+const { javascript } = require('projen')
 const project = new javascript.NodeProject({
   packageName: '@valian/eslint-config',
   description: 'Valian ESLint Config',
@@ -16,6 +16,7 @@ const project = new javascript.NodeProject({
   copyrightOwner: 'Valian',
 
   keywords: ['eslint'],
+  majorVersion: 1,
 
   gitignore: ['.idea'],
   npmIgnoreOptions: {
@@ -34,11 +35,15 @@ const project = new javascript.NodeProject({
   releaseToNpm: true,
   npmAccess: 'public',
   defaultReleaseBranch: 'main',
-  entrypoint: 'index.js',
-  packageManager: javascript.NodePackageManager.NPM,
+  entrypoint: 'index.mjs',
+  packageManager: javascript.NodePackageManager.PNPM,
+  pnpmVersion: '9.9.0',
 
   prettier: true,
-  prettierOptions: { settings: { semi: false, singleQuote: true, printWidth: 120 } },
+  prettierOptions: {
+    settings: { semi: false, singleQuote: true, printWidth: 120 },
+    ignoreFileOptions: { ignorePatterns: ['.github', '.mergify.yml', 'renovate.json5', 'pnpm-lock.yaml'] },
+  },
   eslint: true,
   jest: false,
 
@@ -66,15 +71,19 @@ const project = new javascript.NodeProject({
     },
   },
 
-  peerDeps: ['eslint@>=8.57.0', 'typescript@>=5.4.5'],
+  peerDeps: ['eslint@>=9.9.1', 'typescript@>=5.5.4'],
   deps: [
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
+    'typescript-eslint',
     'eslint-import-resolver-typescript',
 
     'eslint-config-airbnb-base',
-    'eslint-config-airbnb',
-    'eslint-config-airbnb-typescript',
+
+    '@eslint/compat',
+    '@eslint/js',
+    '@eslint/eslintrc',
+    'globals',
 
     'eslint-config-prettier',
     'eslint-plugin-eslint-comments',
@@ -82,16 +91,18 @@ const project = new javascript.NodeProject({
     'eslint-plugin-promise',
     'eslint-plugin-unicorn',
 
-    'eslint-plugin-import',
+    'eslint-plugin-import-x',
     'eslint-plugin-simple-import-sort',
 
-    'eslint-plugin-jsx-a11y',
+    // 'eslint-plugin-jsx-a11y',
     'eslint-plugin-react',
-    'eslint-plugin-react-hooks',
+    'eslint-plugin-react-hooks@5.1.0-rc-a03254bc-20240905',
     'eslint-plugin-react-refresh',
 
     'eslint-plugin-jest',
     'eslint-plugin-jest-formatting',
+
+    'eslint-plugin-tailwindcss',
   ],
 
   devDeps: ['@commitlint/cli', '@commitlint/config-conventional', 'husky', 'markdownlint-cli', 'prettier'],
@@ -100,8 +111,11 @@ const project = new javascript.NodeProject({
 project.addTask('eslint', { description: 'Run eslint', exec: 'eslint .' })
 project.addTask('lint:md', { description: 'Run markdownlint', exec: 'markdownlint *.md' })
 project.addTask('lint:prettier', { description: 'check prettier format', exec: 'prettier . --check' })
-project.addTask('prepare', { exec: 'husky install' })
+project.addTask('prepare', { exec: 'husky' })
 
 project.prettier?.ignoreFile?.addPatterns('.github', '.mergify.yml', 'renovate.json5')
+
+project.package.addField('packageManager', 'pnpm@9.9.0')
+project.npmrc.addConfig('package-manager-strict', 'false') // allow minor/patch version updates of pnpm on dev boxes
 
 project.synth()

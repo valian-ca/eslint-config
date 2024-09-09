@@ -32,14 +32,15 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": ""
+        "RELEASE_TAG_PREFIX": "",
+        "BUMP_PACKAGE": "commit-and-tag-version@^12"
       },
       "steps": [
         {
           "builtin": "release/bump-version"
         }
       ],
-      "condition": "! git log --oneline -1 | grep -q \"chore(release):\""
+      "condition": "git log --oneline -1 | grep -qv \"chore(release):\""
     },
     "clobber": {
       "name": "clobber",
@@ -112,7 +113,7 @@
       "description": "Install project dependencies and update lockfile (non-frozen)",
       "steps": [
         {
-          "exec": "npm install"
+          "exec": "pnpm i --no-frozen-lockfile"
         }
       ]
     },
@@ -121,7 +122,7 @@
       "description": "Install project dependencies using frozen lockfile",
       "steps": [
         {
-          "exec": "npm ci"
+          "exec": "pnpm i --frozen-lockfile"
         }
       ]
     },
@@ -151,7 +152,7 @@
           "exec": "mkdir -p dist/js"
         },
         {
-          "exec": "npm pack --pack-destination dist/js"
+          "exec": "pnpm pack --pack-destination dist/js"
         }
       ]
     },
@@ -171,7 +172,7 @@
       "name": "prepare",
       "steps": [
         {
-          "exec": "husky install"
+          "exec": "husky"
         }
       ]
     },
@@ -179,7 +180,8 @@
       "name": "release",
       "description": "Prepare a release from \"main\" branch",
       "env": {
-        "RELEASE": "true"
+        "RELEASE": "true",
+        "MAJOR": "1"
       },
       "steps": [
         {
@@ -211,7 +213,8 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": ""
+        "RELEASE_TAG_PREFIX": "",
+        "BUMP_PACKAGE": "commit-and-tag-version@^12"
       },
       "steps": [
         {
@@ -227,13 +230,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@commitlint/cli,@commitlint/config-conventional,husky,markdownlint-cli,prettier,projen,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-airbnb,eslint-config-airbnb-base,eslint-config-airbnb-typescript,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-eslint-comments,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-jest-formatting,eslint-plugin-jsx-a11y,eslint-plugin-n,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-hooks,eslint-plugin-react-refresh,eslint-plugin-simple-import-sort,eslint-plugin-unicorn"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@commitlint/cli,@commitlint/config-conventional,husky,markdownlint-cli,prettier,projen,@eslint/compat,@eslint/eslintrc,@eslint/js,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-airbnb-base,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-eslint-comments,eslint-plugin-import-x,eslint-plugin-jest,eslint-plugin-jest-formatting,eslint-plugin-n,eslint-plugin-promise,eslint-plugin-react,eslint-plugin-react-refresh,eslint-plugin-simple-import-sort,eslint-plugin-tailwindcss,eslint-plugin-unicorn,globals,typescript-eslint"
         },
         {
-          "exec": "npm install"
+          "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "npm update @commitlint/cli @commitlint/config-conventional constructs husky markdownlint-cli prettier projen standard-version eslint typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-config-airbnb-base eslint-config-airbnb-typescript eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-jest eslint-plugin-jest-formatting eslint-plugin-jsx-a11y eslint-plugin-n eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-simple-import-sort eslint-plugin-unicorn"
+          "exec": "pnpm update @commitlint/cli @commitlint/config-conventional commit-and-tag-version constructs husky markdownlint-cli prettier projen eslint typescript @eslint/compat @eslint/eslintrc @eslint/js @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb-base eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-eslint-comments eslint-plugin-import-x eslint-plugin-jest eslint-plugin-jest-formatting eslint-plugin-n eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-simple-import-sort eslint-plugin-tailwindcss eslint-plugin-unicorn globals typescript-eslint"
         },
         {
           "exec": "npx projen"
@@ -245,7 +248,7 @@
     }
   },
   "env": {
-    "PATH": "$(npx -c \"node --print process.env.PATH\")"
+    "PATH": "$(pnpm -c exec \"node --print process.env.PATH\")"
   },
   "//": "~~ Generated by projen. To modify, edit .projenrc.js and run \"npx projen\"."
 }
