@@ -40,4 +40,5 @@ jspm_packages/
 !/.github/pull_request_template.md
 !/.prettierignore
 !/.prettierrc.json
+!/.npmrc
 !/.projenrc.js
