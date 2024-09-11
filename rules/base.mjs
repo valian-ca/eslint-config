@@ -15,16 +15,6 @@ export const base = [
   eslintPluginPromise.configs['flat/recommended'],
   eslintPluginImportX.flatConfigs.recommended,
   eslintPluginImportX.flatConfigs.warnings,
-  {
-    rules: {
-      'unicorn/no-array-for-each': 'off',
-      'unicorn/no-array-reduce': 'off',
-      'unicorn/no-negated-condition': 'off',
-      'unicorn/no-null': 'off',
-      'unicorn/prevent-abbreviations': 'off',
-      'unicorn/switch-case-braces': ['error', 'avoid'],
-    },
-  },
   airbnb,
   {
     files: ['**/*.cjs'],
@@ -46,4 +36,19 @@ export const base = [
     },
   },
   ...comments,
+  {
+    rules: {
+      'unicorn/no-array-for-each': 'off',
+      'unicorn/no-array-reduce': 'off',
+      'unicorn/no-negated-condition': 'off',
+      'unicorn/no-null': 'off',
+      'unicorn/prevent-abbreviations': 'off',
+      'unicorn/no-keyword-prefix': 'off',
+      'unicorn/no-nested-ternary': 'off',
+
+      'unicorn/switch-case-braces': ['error', 'avoid'],
+
+      'class-methods-use-this': 'off',
+    },
+  },
 ]

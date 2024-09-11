@@ -1,10 +1,8 @@
 import eslintPluginNode from 'eslint-plugin-n'
 
 export const node = [
-  eslintPluginNode.configs['flat/recommended-module'],
+  ...eslintPluginNode.configs['flat/mixed-esm-and-cjs'],
   {
-    files: ['**/*.{ts,tsx}'],
-
     rules: {
       'n/no-extraneous-import': 'off',
       'n/no-missing-import': 'off',

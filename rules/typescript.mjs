@@ -41,10 +41,42 @@ export const typescript = [
         },
       ],
 
+      camelcase: 'off',
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: 'default',
+          format: ['camelCase'],
+        },
+        {
+          selector: 'variable',
+          format: ['camelCase', 'UPPER_CASE'],
+        },
+        {
+          selector: 'parameter',
+          format: ['camelCase'],
+          leadingUnderscore: 'allow',
+        },
+        {
+          selector: 'function',
+          format: ['camelCase', 'PascalCase'],
+        },
+        {
+          selector: 'typeLike',
+          format: ['PascalCase'],
+        },
+        {
+          selector: 'variable',
+          modifiers: ['destructured'],
+          format: null,
+        },
+      ],
+
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
       'default-case': 'off',
 
       '@typescript-eslint/no-non-null-assertion': 'warn',
+      '@typescript-eslint/no-empty-function': 'warn',
 
       '@typescript-eslint/no-invalid-void-type': ['error', { allowAsThisParameter: true }],
       '@typescript-eslint/array-type': ['error', { default: 'array-simple', readonly: 'generic' }],
@@ -60,6 +92,12 @@ export const typescript = [
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/unbound-method': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
+    },
+  },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      '@typescript-eslint/consistent-type-definitions': 'off',
     },
   },
 ]
