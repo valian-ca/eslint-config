@@ -47,15 +47,11 @@ export const typescript = [
         {
           selector: 'default',
           format: ['camelCase'],
+          leadingUnderscore: 'allow',
         },
         {
           selector: 'variable',
-          format: ['camelCase', 'UPPER_CASE'],
-        },
-        {
-          selector: 'parameter',
-          format: ['camelCase'],
-          leadingUnderscore: 'allow',
+          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
         },
         {
           selector: 'function',
