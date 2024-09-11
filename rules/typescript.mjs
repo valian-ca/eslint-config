@@ -45,11 +45,6 @@ export const typescript = [
       '@typescript-eslint/naming-convention': [
         'error',
         {
-          selector: 'default',
-          format: ['camelCase'],
-          leadingUnderscore: 'allow',
-        },
-        {
           selector: 'variable',
           format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
         },
