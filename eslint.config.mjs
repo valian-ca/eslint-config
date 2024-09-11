@@ -7,6 +7,7 @@ export default [
   ...config.base,
   ...importTypescript,
   ...config.importSort,
+  ...config.node,
   {
     files: ['**/*.js'],
     languageOptions: {
