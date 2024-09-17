@@ -1,4 +1,5 @@
 import eslintJavascript from '@eslint/js'
+import eslintPluginComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginImportX from 'eslint-plugin-import-x'
 import eslintPluginPromise from 'eslint-plugin-promise'
@@ -6,7 +7,6 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
 
 import { airbnb } from './airbnb.mjs'
-import { comments } from './comments.mjs'
 
 export const base = [
   eslintConfigPrettier,
@@ -15,6 +15,7 @@ export const base = [
   eslintPluginPromise.configs['flat/recommended'],
   eslintPluginImportX.flatConfigs.recommended,
   eslintPluginImportX.flatConfigs.warnings,
+  eslintPluginComments.recommended,
   airbnb,
   {
     files: ['**/*.cjs'],
@@ -35,7 +36,6 @@ export const base = [
       },
     },
   },
-  ...comments,
   {
     rules: {
       'unicorn/no-array-for-each': 'off',
