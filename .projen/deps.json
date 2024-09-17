@@ -45,6 +45,10 @@
       "type": "peer"
     },
     {
+      "name": "@eslint-community/eslint-plugin-eslint-comments",
+      "type": "runtime"
+    },
+    {
       "name": "@eslint/compat",
       "type": "runtime"
     },
@@ -74,10 +78,6 @@
     },
     {
       "name": "eslint-import-resolver-typescript",
-      "type": "runtime"
-    },
-    {
-      "name": "eslint-plugin-eslint-comments",
       "type": "runtime"
     },
     {

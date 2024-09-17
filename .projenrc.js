@@ -86,7 +86,7 @@ const project = new javascript.NodeProject({
     'globals',
 
     'eslint-config-prettier',
-    'eslint-plugin-eslint-comments',
+    '@eslint-community/eslint-plugin-eslint-comments',
     'eslint-plugin-n',
     'eslint-plugin-promise',
     'eslint-plugin-unicorn',
