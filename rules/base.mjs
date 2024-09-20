@@ -48,6 +48,13 @@ export const base = [
 
       'unicorn/switch-case-braces': ['error', 'avoid'],
 
+      'import-x/no-self-import': 'error',
+      'import-x/no-cycle': 'error',
+      'import-x/no-useless-path-segments': 'error',
+      'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
+      'import-x/first': 'error',
+      'import-x/no-relative-packages': 'error',
+
       'class-methods-use-this': 'off',
     },
   },
