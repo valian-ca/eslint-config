@@ -61,6 +61,7 @@ export const react = [
       'react/jsx-props-no-spreading': 'off',
       'react/prop-types': 'off',
       'react/require-default-props': 'off',
+      'react/display-name': 'off',
 
       'react/function-component-definition': [
         'warn',
@@ -83,14 +84,6 @@ export const react = [
       'react/no-invalid-html-attribute': 'error',
       'react/jsx-no-constructed-context-values': 'error',
       'react/no-unstable-nested-components': 'error',
-      'react/button-has-type': [
-        'error',
-        {
-          button: true,
-          submit: true,
-          reset: false,
-        },
-      ],
     },
   },
 ]
