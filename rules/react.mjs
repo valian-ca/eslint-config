@@ -51,9 +51,13 @@ export const react = [
     },
   },
   {
+    files: ['**/*.{ts,tsx}'],
     rules: {
       '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { attributes: false } }],
-
+    },
+  },
+  {
+    rules: {
       'react/jsx-props-no-spreading': 'off',
       'react/prop-types': 'off',
       'react/require-default-props': 'off',
