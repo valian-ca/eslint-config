@@ -13,26 +13,10 @@ export const react = [
         ...globals.browser,
       },
     },
-
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
     rules: {
-      'react/jsx-props-no-spreading': 'off',
-      'react/prop-types': 'off',
-      'react/require-default-props': 'off',
-
-      'react/function-component-definition': [
-        'warn',
-        {
-          namedComponents: 'arrow-function',
-          unnamedComponents: 'arrow-function',
-        },
-      ],
-
       'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
     },
   },
@@ -40,6 +24,13 @@ export const react = [
     files: ['**/*.d.ts'],
     rules: {
       'unicorn/filename-case': ['error', { cases: { kebabCase: true } }],
+    },
+  },
+  {
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
   },
   reactPlugin.configs.flat['jsx-runtime'],
@@ -56,7 +47,46 @@ export const react = [
       'react-refresh': eslintPluginReactRefresh,
     },
     rules: {
-      'react-refresh/only-export-components': 'warn',
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    },
+  },
+  {
+    rules: {
+      '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { attributes: false } }],
+
+      'react/jsx-props-no-spreading': 'off',
+      'react/prop-types': 'off',
+      'react/require-default-props': 'off',
+
+      'react/function-component-definition': [
+        'warn',
+        {
+          namedComponents: 'arrow-function',
+          unnamedComponents: 'arrow-function',
+        },
+      ],
+
+      // from eslint-config-airbnb/rules
+      'react/jsx-pascal-case': [
+        'error',
+        {
+          allowAllCaps: true,
+          ignore: [],
+        },
+      ],
+
+      'react/jsx-no-useless-fragment': 'error',
+      'react/no-invalid-html-attribute': 'error',
+      'react/jsx-no-constructed-context-values': 'error',
+      'react/no-unstable-nested-components': 'error',
+      'react/button-has-type': [
+        'error',
+        {
+          button: true,
+          submit: true,
+          reset: false,
+        },
+      ],
     },
   },
 ]
