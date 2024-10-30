@@ -4,8 +4,7 @@ const project = new javascript.NodeProject({
   description: 'Valian ESLint Config',
   repository: 'git+https://github.com/valian-ca/eslint-config.git',
 
-  minNodeVersion: '20.x',
-  workflowNodeVersion: 'lts/iron',
+  minNodeVersion: 20,
 
   authorName: 'Valian',
   authorUrl: 'https://valian.ca',
@@ -37,7 +36,7 @@ const project = new javascript.NodeProject({
   defaultReleaseBranch: 'main',
   entrypoint: 'index.mjs',
   packageManager: javascript.NodePackageManager.PNPM,
-  pnpmVersion: '9.11.0',
+  pnpmVersion: '9.12.3',
 
   prettier: true,
   prettierOptions: {
@@ -48,9 +47,9 @@ const project = new javascript.NodeProject({
   jest: false,
 
   depsUpgrade: true,
-  depsUpgradeOptions: {
-    workflow: false,
-  },
+  // depsUpgradeOptions: {
+  //   workflow: false,
+  // },
   renovatebot: true,
   renovatebotOptions: {
     overrideConfig: {
@@ -71,7 +70,7 @@ const project = new javascript.NodeProject({
     },
   },
 
-  peerDeps: ['eslint@>=9.11.0', 'typescript@>=5.5.4'],
+  peerDeps: ['eslint@>=9.13.0', 'typescript@>=5.5.4'],
   deps: [
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
@@ -115,7 +114,7 @@ project.addTask('prepare', { exec: 'husky' })
 
 project.prettier?.ignoreFile?.addPatterns('.github', '.mergify.yml', 'renovate.json5')
 
-project.package.addField('packageManager', 'pnpm@9.11.0')
+project.package.addField('packageManager', 'pnpm@9.12.3')
 project.npmrc.addConfig('package-manager-strict', 'false') // allow minor/patch version updates of pnpm on dev boxes
 
 project.synth()
