@@ -63,7 +63,7 @@ export const typescript = [
         },
       ],
 
-      '@typescript-eslint/switch-exhaustiveness-check': 'error',
+      '@typescript-eslint/switch-exhaustiveness-check': ['error', { considerDefaultExhaustiveForUnions: true }],
       'default-case': 'off',
 
       '@typescript-eslint/no-non-null-assertion': 'warn',
