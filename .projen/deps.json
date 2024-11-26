@@ -36,7 +36,7 @@
     },
     {
       "name": "eslint",
-      "version": ">=9.13.0",
+      "version": ">=9.15.0",
       "type": "peer"
     },
     {
