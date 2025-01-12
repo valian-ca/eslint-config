@@ -12,14 +12,14 @@ importers:
         specifier: ^4.4.1
         version: 4.4.1(eslint@9.15.0(jiti@2.4.2))
       '@eslint/compat':
-        specifier: ^1.2.4
-        version: 1.2.4(eslint@9.15.0(jiti@2.4.2))
+        specifier: ^1.2.5
+        version: 1.2.5(eslint@9.15.0(jiti@2.4.2))
       '@eslint/eslintrc':
         specifier: ^3.2.0
         version: 3.2.0
       '@eslint/js':
-        specifier: ^9.17.0
-        version: 9.17.0
+        specifier: ^9.18.0
+        version: 9.18.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.19.1
         version: 8.19.1(@typescript-eslint/parser@8.19.1(eslint@9.15.0(jiti@2.4.2))(typescript@5.5.4))(eslint@9.15.0(jiti@2.4.2))(typescript@5.5.4)
@@ -57,8 +57,8 @@ importers:
         specifier: 5.1.0-rc-a03254bc-20240905
         version: 5.1.0-rc-a03254bc-20240905(eslint@9.15.0(jiti@2.4.2))
       eslint-plugin-react-refresh:
-        specifier: ^0.4.16
-        version: 0.4.16(eslint@9.15.0(jiti@2.4.2))
+        specifier: ^0.4.18
+        version: 0.4.18(eslint@9.15.0(jiti@2.4.2))
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.15.0(jiti@2.4.2))
@@ -100,8 +100,8 @@ importers:
         specifier: ^3.4.2
         version: 3.4.2
       projen:
-        specifier: ^0.91.5
-        version: 0.91.5(constructs@10.4.2)
+        specifier: ^0.91.6
+        version: 0.91.6(constructs@10.4.2)
       typescript:
         specifier: 5.5.4
         version: 5.5.4
@@ -205,8 +205,8 @@ packages:
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/compat@1.2.4':
-    resolution: {integrity: sha512-S8ZdQj/N69YAtuqFt7653jwcvuUj131+6qGLUyDqfDg1OIoBQ66OCuXC473YQfO2AaxITTutiRQiDwoo7ZLYyg==}
+  '@eslint/compat@1.2.5':
+    resolution: {integrity: sha512-5iuG/StT+7OfvhoBHPlmxkPA9om6aDUFgmD4+mWKAGsYt4vCe8rypneG03AuseyRHBmcCLXQtIH5S26tIoggLg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.10.0
@@ -230,8 +230,8 @@ packages:
     resolution: {integrity: sha512-tMTqrY+EzbXmKJR5ToI8lxu7jaN5EdmrBFJpQk5JmSlyLsx6o4t27r883K5xsLuCYCpfKBCGswMSWXsM+jB7lg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/js@9.17.0':
-    resolution: {integrity: sha512-Sxc4hqcs1kTu0iID3kcZDW3JHq2a77HO9P8CP6YEA/FpH3Ll8UXE2r/86Rz9YJLKme39S9vU5OWNjC6Xl0Cr3w==}
+  '@eslint/js@9.18.0':
+    resolution: {integrity: sha512-fK6L7rxcq6/z+AaQMtiFTkvbHkBLNlwyRxHpKawP0x3u9+NC6MQTnFW+AdpwC6gfHTW0051cokQgtTN2FqlxQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/object-schema@2.1.4':
@@ -1110,8 +1110,8 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
-  eslint-plugin-react-refresh@0.4.16:
-    resolution: {integrity: sha512-slterMlxAhov/DZO8NScf6mEeMBBXodFUolijDvrtTxyezyLoTQaa73FyYus/VbTdftd8wBgBxPMRk3poleXNQ==}
+  eslint-plugin-react-refresh@0.4.18:
+    resolution: {integrity: sha512-IRGEoFn3OKalm3hjfolEWGqoF/jPqeEYFp+C8B0WMzwGwBMvlRDQd06kghDhF0C61uJ6WfSDhEZE/sAQjduKgw==}
     peerDependencies:
       eslint: '>=8.40'
 
@@ -2211,8 +2211,8 @@ packages:
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
-  projen@0.91.5:
-    resolution: {integrity: sha512-j4gzywNELz3Adq5YZ6PoyyzZWXat29y7zdCi8pnkUjuuXdDJgx5dHDRM/KPyEJpo8ytx6hY5GOHsOZnea4/cgw==}
+  projen@0.91.6:
+    resolution: {integrity: sha512-azGxE8BDX7jkS+PovP8s70+wuURVOwtXYUh2z+kXbP11WDq4Gpfo5F/IyRQTI1kPrHR8sQbXkEnLGi2xIroBxA==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
     peerDependencies:
@@ -2994,7 +2994,7 @@ snapshots:
 
   '@eslint-community/regexpp@4.12.1': {}
 
-  '@eslint/compat@1.2.4(eslint@9.15.0(jiti@2.4.2))':
+  '@eslint/compat@1.2.5(eslint@9.15.0(jiti@2.4.2))':
     optionalDependencies:
       eslint: 9.15.0(jiti@2.4.2)
 
@@ -3024,7 +3024,7 @@ snapshots:
 
   '@eslint/js@9.15.0': {}
 
-  '@eslint/js@9.17.0': {}
+  '@eslint/js@9.18.0': {}
 
   '@eslint/object-schema@2.1.4': {}
 
@@ -4143,7 +4143,7 @@ snapshots:
     dependencies:
       eslint: 9.15.0(jiti@2.4.2)
 
-  eslint-plugin-react-refresh@0.4.16(eslint@9.15.0(jiti@2.4.2)):
+  eslint-plugin-react-refresh@0.4.18(eslint@9.15.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.15.0(jiti@2.4.2)
 
@@ -5316,7 +5316,7 @@ snapshots:
 
   process-nextick-args@2.0.1: {}
 
-  projen@0.91.5(constructs@10.4.2):
+  projen@0.91.6(constructs@10.4.2):
     dependencies:
       constructs: 10.4.2
 
