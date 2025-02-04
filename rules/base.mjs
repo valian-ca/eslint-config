@@ -50,6 +50,7 @@ export const base = [
 
       'import-x/extensions': [
         'error',
+        'always',
         {
           js: 'never',
           jsx: 'never',
