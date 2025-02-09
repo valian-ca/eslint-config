@@ -36,7 +36,6 @@
     "constructs",
     "eslint",
     "typescript",
-    "eslint-plugin-react-hooks",
     "projen"
   ]
 }

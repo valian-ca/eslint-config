@@ -36,7 +36,7 @@ const project = new javascript.NodeProject({
   defaultReleaseBranch: 'main',
   entrypoint: 'index.mjs',
   packageManager: javascript.NodePackageManager.PNPM,
-  pnpmVersion: '9.15.0',
+  pnpmVersion: '10.2.0',
 
   prettier: true,
   prettierOptions: {
@@ -70,7 +70,7 @@ const project = new javascript.NodeProject({
     },
   },
 
-  peerDeps: ['eslint@>=9.18.0', 'typescript@>=5.6.3'],
+  peerDeps: ['eslint@>=9.20.0', 'typescript@>=5.7.3'],
   deps: [
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser',
@@ -95,13 +95,13 @@ const project = new javascript.NodeProject({
 
     // 'eslint-plugin-jsx-a11y',
     'eslint-plugin-react',
-    'eslint-plugin-react-hooks@5.1.0-rc-a03254bc-20240905',
+    'eslint-plugin-react-hooks',
     'eslint-plugin-react-refresh',
 
     'eslint-plugin-jest',
     'eslint-plugin-jest-formatting',
 
-    'eslint-plugin-tailwindcss',
+    // 'eslint-plugin-tailwindcss',
   ],
 
   devDeps: ['@commitlint/cli', '@commitlint/config-conventional', 'husky', 'markdownlint-cli', 'prettier'],
@@ -114,7 +114,7 @@ project.addTask('prepare', { exec: 'husky' })
 
 project.prettier?.ignoreFile?.addPatterns('.github', '.mergify.yml', 'renovate.json5')
 
-project.package.addField('packageManager', 'pnpm@9.15.0')
+project.package.addField('packageManager', 'pnpm@10.2.0')
 project.npmrc.addConfig('package-manager-strict', 'false') // allow minor/patch version updates of pnpm on dev boxes
 
 project.synth()
