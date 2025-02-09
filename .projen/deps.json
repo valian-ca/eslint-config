@@ -117,10 +117,6 @@
       "type": "runtime"
     },
     {
-      "name": "eslint-plugin-tailwindcss",
-      "type": "runtime"
-    },
-    {
       "name": "eslint-plugin-unicorn",
       "type": "runtime"
     },

@@ -101,7 +101,7 @@ const project = new javascript.NodeProject({
     'eslint-plugin-jest',
     'eslint-plugin-jest-formatting',
 
-    'eslint-plugin-tailwindcss',
+    // 'eslint-plugin-tailwindcss',
   ],
 
   devDeps: ['@commitlint/cli', '@commitlint/config-conventional', 'husky', 'markdownlint-cli', 'prettier'],
