@@ -1,0 +1,27 @@
+{
+  extends: ['config:recommended', ':semanticCommits', ':semanticCommitTypeAll(chore)'],
+  labels: ['dependencies'],
+  packageRules: [
+    {
+      groupName: 'GitHub Actions Dependencies',
+      matchManagers: ['github-actions'],
+    },
+    {
+      groupName: 'Node-based Dev Tools',
+      matchManagers: ['npm'],
+    },
+    {
+      groupName: 'Node.js',
+      matchPackageNames: ['pnpm'],
+    },
+    {
+      groupName: 'Node.js',
+      matchPackageNames: ['node'],
+      allowedVersions: '<23.0.0',
+    },
+    {
+      groupName: 'eslint',
+      matchPackageNames: ['/eslint/'],
+    },
+  ],
+}

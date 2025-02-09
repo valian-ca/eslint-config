@@ -1,0 +1,25 @@
+name: pull-request
+on:
+  pull_request:
+
+jobs:
+  lint:
+    name: eslint & prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: setup pnpm
+        uses: valian-ca/github-workflows/.github/actions/setup-pnpm@main
+      - name: eslint
+        run: pnpm eslint
+      - name: prettier
+        run: pnpm prettier
+
+  markdown:
+    name: markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: '**/*.md'
