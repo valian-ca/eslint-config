@@ -66,6 +66,7 @@
     ".": "./index.mjs",
     "./base": "./rules/base.mjs",
     "./importSort": "./rules/importSort.mjs",
+    "./no-cycle": "./rules/no-cycle.mjs",
     "./jest": "./rules/jest.mjs",
     "./node": "./rules/node.mjs",
     "./react": "./rules/react.mjs",
