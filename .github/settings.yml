@@ -51,7 +51,7 @@ branches:
           - 'eslint & prettier'
           - markdown lint
           - commitlint
-      enforce_admins: true
+      enforce_admins: false
       required_linear_history: true
       required_signatures: true
       required_conversation_resolution: true
