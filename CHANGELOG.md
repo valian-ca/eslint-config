@@ -7,10 +7,6 @@
 
 ### 🏡 Chore
 
-- Eject from projen ([#109](https://github.com/valian-ca/eslint-config/pull/109))
-- Configure import-x/no-cycle to improve performance ([#112](https://github.com/valian-ca/eslint-config/pull/112))
-- Update project config ([83ee774](https://github.com/valian-ca/eslint-config/commit/83ee774))
-- **release:** V1.4.1 ([0ec54ac](https://github.com/valian-ca/eslint-config/commit/0ec54ac))
 - Move no-cycle to separate config ([6461543](https://github.com/valian-ca/eslint-config/commit/6461543))
 
 ### ❤️ Contributors
