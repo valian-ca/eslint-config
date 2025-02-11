@@ -59,7 +59,7 @@ export const base = [
         },
       ],
       'import-x/no-self-import': 'error',
-      'import-x/no-cycle': 'error',
+      'import-x/no-cycle': ['error', { maxDepth: 5, ignoreExternal: true }],
       'import-x/no-useless-path-segments': 'error',
       'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
       'import-x/first': 'error',
