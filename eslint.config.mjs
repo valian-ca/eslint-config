@@ -21,4 +21,10 @@ export default [
       'unicorn/prefer-module': 'off',
     },
   },
+  {
+    files: ['**/*.mjs'],
+    rules: {
+      'import-x/default': 'off',
+    },
+  },
 ]
