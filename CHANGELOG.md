@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.4.3
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v1.4.2...v1.4.3)
+
+### 🏡 Chore
+
+- Fix CHANGELOG ([13e5564](https://github.com/valian-ca/eslint-config/commit/13e5564))
+- Fix markdownlint ([2ca2f4c](https://github.com/valian-ca/eslint-config/commit/2ca2f4c))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v1.4.2
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v1.3.20...v1.4.2)
