@@ -2,7 +2,7 @@
 .editorconfig
 .eslintrc.js
 .husky/*
-.markdownlint.yml
+.markdownlint-cli2.yaml
 .tool-versions
 commitlint.config.cjs
 permissions-backup.acl
