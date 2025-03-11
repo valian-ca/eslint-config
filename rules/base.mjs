@@ -1,6 +1,6 @@
 import eslintJavascript from '@eslint/js'
 import eslintPluginComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
-import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import eslintPluginImportX from 'eslint-plugin-import-x'
 import eslintPluginPromise from 'eslint-plugin-promise'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
