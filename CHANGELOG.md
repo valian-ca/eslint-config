@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.5.0
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v1.4.4...v1.5.0)
+
+### 🚀 Enhancements
+
+- Config prefer-nullish-coalescing ([#129](https://github.com/valian-ca/eslint-config/pull/129))
+
+### 🏡 Chore
+
+- Update deps ([#130](https://github.com/valian-ca/eslint-config/pull/130))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v1.4.4
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v1.4.3...v1.4.4)
