@@ -73,6 +73,7 @@ export const typescript = [
       '@typescript-eslint/array-type': ['error', { default: 'array-simple', readonly: 'generic' }],
       '@typescript-eslint/restrict-template-expressions': ['error', { allowNullish: true }],
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/prefer-nullish-coalescing': ['error', { ignorePrimitives: true }],
       '@typescript-eslint/consistent-type-imports': [
         'error',
         { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
