@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.5.1
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v1.5.0...v1.5.1)
+
+### 🏡 Chore
+
+- Update deps ([#131](https://github.com/valian-ca/eslint-config/pull/131))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v1.5.0
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v1.4.4...v1.5.0)
