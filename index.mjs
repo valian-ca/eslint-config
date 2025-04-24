@@ -1,6 +1,7 @@
 import { base } from './rules/base.mjs'
 import { importSort } from './rules/import-sort.mjs'
 import { jest } from './rules/jest.mjs'
+import { json } from './rules/json.mjs'
 import { noCycle } from './rules/no-cycle.mjs'
 import { node } from './rules/node.mjs'
 import { react } from './rules/react.mjs'
@@ -14,4 +15,5 @@ export const config = {
   jest,
   react,
   node,
+  json,
 }

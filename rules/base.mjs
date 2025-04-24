@@ -1,7 +1,8 @@
 import eslintJavascript from '@eslint/js'
 import eslintPluginComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
-import eslintPluginImportX from 'eslint-plugin-import-x'
+import { flatConfigs as eslintPluginImportX } from 'eslint-plugin-import-x'
+import eslintPluginNoUseExtendNative from 'eslint-plugin-no-use-extend-native'
 import eslintPluginPromise from 'eslint-plugin-promise'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
@@ -13,10 +14,17 @@ export const base = [
   eslintJavascript.configs.recommended,
   eslintPluginUnicorn.configs['flat/all'],
   eslintPluginPromise.configs['flat/recommended'],
-  eslintPluginImportX.flatConfigs.recommended,
-  eslintPluginImportX.flatConfigs.warnings,
+  eslintPluginImportX.recommended,
+  eslintPluginImportX.warnings,
   eslintPluginComments.recommended,
+  eslintPluginNoUseExtendNative.configs.recommended,
   airbnb,
+  {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+      reportUnusedInlineConfigs: 'error',
+    },
+  },
   {
     files: ['**/*.cjs'],
     languageOptions: {
