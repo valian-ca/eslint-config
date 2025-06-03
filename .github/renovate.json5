@@ -1,6 +1,7 @@
 {
-  extends: ['config:recommended', ':semanticCommits', ':semanticCommitTypeAll(chore)'],
+  extends: ["config:js-lib", "config:semverAllMonthly", ":semanticCommits"],
   labels: ['dependencies'],
+  timezone: "Canada/Eastern",
   packageRules: [
     {
       groupName: 'GitHub Actions Dependencies',
