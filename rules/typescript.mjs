@@ -1,10 +1,10 @@
-import eslintPluginImportX from 'eslint-plugin-import-x'
+import { flatConfigs as importXConfigs } from 'eslint-plugin-import-x'
 import { configs as tsConfigs } from 'typescript-eslint'
 
 import { testFiles } from './jest.mjs'
 
 export const importTypescript = [
-  eslintPluginImportX.flatConfigs.typescript,
+  importXConfigs.typescript,
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
