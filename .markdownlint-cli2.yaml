@@ -1,2 +1,8 @@
+config:
+  MD013: false
+  MD024:
+    siblings_only: true
+  MD031: false
+  MD040: false
 ignores:
   - CHANGELOG.md
