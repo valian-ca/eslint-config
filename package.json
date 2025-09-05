@@ -24,13 +24,14 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
-    "eslint": "9.32.0",
-    "husky": "9.1.7",
-    "markdownlint-cli2": "0.18.1",
-    "prettier": "3.6.2",
-    "typescript": "5.8.3"
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "eslint": "^9.32.0",
+    "husky": "^9.1.7",
+    "markdownlint-cli2": "^0.18.1",
+    "prettier": "^3.6.2",
+    "publint": "^0.3.12",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "eslint": ">=9.28.0",
@@ -45,8 +46,7 @@
     "@stylistic/eslint-plugin": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
-    "@valian/eslint-config": "link:",
-    "eslint-config-airbnb-base": "^15.0.0",
+    "confusing-browser-globals": "^1.0.10",
     "eslint-config-prettier": "^10.1.5",
     "eslint-import-resolver-typescript": "^4.4.2",
     "eslint-plugin-import-x": "^4.15.0",
@@ -69,7 +69,7 @@
   "exports": {
     ".": "./index.mjs",
     "./base": "./rules/base.mjs",
-    "./importSort": "./rules/importSort.mjs",
+    "./import-sort": "./rules/import-sort.mjs",
     "./no-cycle": "./rules/no-cycle.mjs",
     "./json": "./rules/json.mjs",
     "./jest": "./rules/jest.mjs",

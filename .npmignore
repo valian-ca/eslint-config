@@ -5,7 +5,6 @@
 .markdownlint-cli2.yaml
 .tool-versions
 commitlint.config.cjs
-permissions-backup.acl
 /dist/changelog.md
 /dist/version.txt
 /.prettierignore

@@ -14,7 +14,8 @@ jobs:
         run: pnpm eslint
       - name: prettier
         run: pnpm prettier
-
+      - name: publint
+        run: pnpm publint
   markdown:
     name: markdown lint
     runs-on: ubuntu-latest
