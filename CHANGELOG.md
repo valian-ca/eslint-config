@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.5.3
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v1.5.2...v1.5.3)
+
+### 🩹 Fixes
+
+- **deps:** Update eslint ([#144](https://github.com/valian-ca/eslint-config/pull/144))
+- **deps:** Update eslint ([#146](https://github.com/valian-ca/eslint-config/pull/146))
+
+### 🏡 Chore
+
+- Update README.md and create CONTRIBUTING.md ([#145](https://github.com/valian-ca/eslint-config/pull/145))
+- Remove eslint-config-airbnb-base ([#149](https://github.com/valian-ca/eslint-config/pull/149))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v1.5.2
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v1.5.1...v1.5.2)
