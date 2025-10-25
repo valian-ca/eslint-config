@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.6.1
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v1.6.0...v1.6.1)
+
+### 🏡 Chore
+
+- Improve typescript configuration ([#158](https://github.com/valian-ca/eslint-config/pull/158))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v1.6.0
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v1.5.3...v1.6.0)
