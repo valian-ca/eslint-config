@@ -1,12 +1,12 @@
 import { flatConfigs as importXConfigs } from 'eslint-plugin-import-x'
 import { configs as tsConfigs } from 'typescript-eslint'
 
-import { testFiles } from './jest.mjs'
+import { testFiles } from './test-files.mjs'
 
 export const importTypescript = [
   importXConfigs.typescript,
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx,cts,mts}'],
     languageOptions: {
       parser: '@typescript-eslint/parser',
       ecmaVersion: 'latest',
@@ -23,14 +23,14 @@ export const importTypescript = [
 
 export const typescript = [
   ...importTypescript,
-  ...tsConfigs.strictTypeChecked,
-  ...tsConfigs.stylisticTypeChecked,
+  ...tsConfigs.strictTypeChecked.map((config) => ({ files: ['**/*.{ts,tsx}'], ...config })),
+  ...tsConfigs.stylisticTypeChecked.map((config) => ({ files: ['**/*.{ts,tsx}'], ...config })),
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
     ...tsConfigs.disableTypeChecked,
   },
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx,cts,mts}'],
     rules: {
       '@typescript-eslint/no-unused-vars': [
         'error',
