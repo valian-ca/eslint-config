@@ -3,6 +3,7 @@ import eslintPluginComments from '@eslint-community/eslint-plugin-eslint-comment
 import confusingBrowserGlobals from 'confusing-browser-globals'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import { flatConfigs as eslintPluginImportX } from 'eslint-plugin-import-x'
+// eslint-disable-next-line import-x/no-rename-default
 import eslintPluginNoUseExtendNative from 'eslint-plugin-no-use-extend-native'
 import eslintPluginPromise from 'eslint-plugin-promise'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'

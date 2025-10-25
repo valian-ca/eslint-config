@@ -1,3 +1,4 @@
+// eslint-disable-next-line import-x/no-rename-default
 import jsonPlugin from '@eslint/json'
 
 export const json = [
