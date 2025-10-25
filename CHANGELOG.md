@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v1.6.0
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v1.5.3...v1.6.0)
+
+### 🚀 Enhancements
+
+- Add eslint-plugin-zod-x and eslint-plugin-storybook ([#155](https://github.com/valian-ca/eslint-config/pull/155))
+- Add vitest eslint config ([#157](https://github.com/valian-ca/eslint-config/pull/157))
+
+### 🩹 Fixes
+
+- **deps:** Update dependency eslint-plugin-unicorn to v61 ([#152](https://github.com/valian-ca/eslint-config/pull/152))
+- **deps:** Update dependency eslint-plugin-react-hooks to v7 ([#154](https://github.com/valian-ca/eslint-config/pull/154))
+
+### 🏡 Chore
+
+- Pmpm approve-builds ([b5ff5e1](https://github.com/valian-ca/eslint-config/commit/b5ff5e1))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v1.5.3
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v1.5.2...v1.5.3)
