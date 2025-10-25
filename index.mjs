@@ -7,6 +7,7 @@ import { node } from './rules/node.mjs'
 import { react } from './rules/react.mjs'
 import { storybook } from './rules/storybook.mjs'
 import { typescript } from './rules/typescript.mjs'
+import { vitest } from './rules/vitest.mjs'
 import { zod } from './rules/zod.mjs'
 
 export const config = {
@@ -19,5 +20,6 @@ export const config = {
   storybook,
   node,
   json,
+  vitest,
   zod,
 }
