@@ -5,3 +5,5 @@ export const noCycle = [
     },
   },
 ]
+
+export default noCycle

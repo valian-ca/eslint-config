@@ -87,3 +87,5 @@ export const react = [
     },
   },
 ]
+
+export default react

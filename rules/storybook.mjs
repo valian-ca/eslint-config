@@ -10,3 +10,5 @@ export const storybook = [
     },
   },
 ]
+
+export default storybook

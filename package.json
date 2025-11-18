@@ -80,6 +80,7 @@
     "./react": "./rules/react.mjs",
     "./storybook": "./rules/storybook.mjs",
     "./typescript": "./rules/typescript.mjs",
+    "./vitest": "./rules/vitest.mjs",
     "./zod": "./rules/zod.mjs"
   },
   "type": "module",

@@ -97,3 +97,5 @@ export const typescript = [
     },
   },
 ]
+
+export default typescript

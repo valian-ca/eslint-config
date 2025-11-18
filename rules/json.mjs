@@ -36,3 +36,5 @@ export const json = [
     },
   },
 ]
+
+export default json
