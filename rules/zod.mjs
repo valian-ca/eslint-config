@@ -4,9 +4,10 @@ export const zod = [
   eslintPluginZodX.configs.recommended,
   {
     rules: {
-      'zod-x/prefer-namespace-import': 'off',
       'zod-x/require-schema-suffix': ['error', { suffix: 'Zod' }],
       'zod-x/array-style': ['error', { style: 'method' }],
     },
   },
 ]
+
+export default zod
