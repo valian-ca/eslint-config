@@ -9,3 +9,5 @@ export const vitest = [
     ...vitestPlugin.configs.recommended,
   },
 ]
+
+export default vitest

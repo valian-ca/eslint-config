@@ -12,3 +12,5 @@ export const jest = [
     ...jestEslint.configs['flat/style'],
   },
 ]
+
+export default jest

@@ -34,3 +34,5 @@ export const importSort = [
     },
   },
 ]
+
+export default importSort

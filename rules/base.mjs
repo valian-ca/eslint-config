@@ -342,3 +342,5 @@ export const base = [
   },
   eslintConfigPrettier,
 ]
+
+export default base
