@@ -325,6 +325,8 @@ export const base = [
         'error',
         'always',
         {
+          mjs: 'never',
+          cjs: 'never',
           js: 'never',
           jsx: 'never',
           ts: 'never',

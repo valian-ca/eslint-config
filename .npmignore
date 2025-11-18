@@ -1,7 +1,7 @@
 .github/*
 .editorconfig
 .husky/*
-/commitlint.config.cjs
+/commitlint.config.mjs
 /dist/changelog.md
 /dist/version.txt
 /.gitattributes
