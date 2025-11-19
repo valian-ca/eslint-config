@@ -23,7 +23,7 @@ const baseJsConfigs = [
       // best-practices.js (deduped from @eslint/js recommended)
       'array-callback-return': ['error', { allowImplicit: true }],
       'block-scoped-var': 'error',
-      'class-methods-use-this': ['error', { exceptMethods: [] }],
+      'class-methods-use-this': 'off',
       'consistent-return': 'error',
       curly: ['error', 'multi-line'],
       'default-case': ['error', { commentPattern: '^no default$' }],
@@ -283,10 +283,7 @@ const baseJsConfigs = [
       'no-underscore-dangle': 'off',
       'no-use-before-define': 'off',
       'no-confusing-arrow': 'off',
-    },
-  },
-  {
-    rules: {
+
       'unicorn/no-array-for-each': 'off',
       'unicorn/no-array-reduce': 'off',
       'unicorn/no-negated-condition': 'off',
@@ -314,8 +311,6 @@ const baseJsConfigs = [
       'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
       'import-x/first': 'error',
       'import-x/no-relative-packages': 'error',
-
-      'class-methods-use-this': 'off',
     },
   },
   eslintConfigPrettier,
@@ -323,16 +318,19 @@ const baseJsConfigs = [
 
 export const base = defineConfig([
   {
+    name: 'valian/base/javascript',
     files: ['**/*.{js,ts,jsx,tsx,mjs,cjs}'],
     extends: [baseJsConfigs],
   },
   {
+    name: 'valian/base/linter-options',
     linterOptions: {
       reportUnusedDisableDirectives: 'error',
       reportUnusedInlineConfigs: 'error',
     },
   },
   {
+    name: 'valian/base/commonjs',
     files: ['**/*.cjs'],
     languageOptions: {
       sourceType: 'commonjs',
@@ -343,6 +341,7 @@ export const base = defineConfig([
     },
   },
   {
+    name: 'valian/base/mjs',
     files: ['**/*.mjs'],
     languageOptions: {
       sourceType: 'module',

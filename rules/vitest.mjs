@@ -5,8 +5,9 @@ import { testFiles } from './test-files.mjs'
 
 export const vitest = defineConfig([
   {
+    name: 'valian/vitest/recommended',
     files: testFiles,
-    ...plugin.configs.recommended,
+    extends: [plugin.configs.recommended],
   },
 ])
 

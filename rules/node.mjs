@@ -3,6 +3,7 @@ import eslintPluginNode from 'eslint-plugin-n'
 
 export const node = defineConfig([
   {
+    name: 'valian/node/recommended-module',
     files: ['**/*.{js,ts,jsx,tsx,mjs}'],
     extends: [eslintPluginNode.configs['flat/recommended-module']],
     rules: {
@@ -12,6 +13,7 @@ export const node = defineConfig([
     },
   },
   {
+    name: 'valian/node/recommended-script',
     files: ['**/*.{cjs}'],
     extends: [eslintPluginNode.configs['flat/recommended-script']],
     rules: {
@@ -25,6 +27,7 @@ export const node = defineConfig([
 export const mixedEsmAndCjs = defineConfig([
   ...eslintPluginNode.configs['flat/mixed-esm-and-cjs'],
   {
+    name: 'valian/node/mixed-esm-and-cjs/custom',
     rules: {
       'n/no-extraneous-import': 'off',
       'n/no-missing-import': 'off',
