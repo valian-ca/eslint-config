@@ -1,9 +1,10 @@
+import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 
 import { importTypescript } from './rules/typescript.mjs'
 import { config } from './index.mjs'
 
-export default [
+export default defineConfig([
   ...config.base,
   ...importTypescript,
   ...config.importSort,
@@ -28,4 +29,4 @@ export default [
       'import-x/default': 'off',
     },
   },
-]
+])

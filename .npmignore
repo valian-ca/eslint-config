@@ -1,13 +1,15 @@
 .github/*
 .editorconfig
 .husky/*
+.vscode/*
 /commitlint.config.mjs
 /dist/changelog.md
 /dist/version.txt
 /.gitattributes
-/.eslintrc.config.mjs
+/eslint.config.mjs
 /.markdownlint-cli2.yaml
 /.markdownlintignore
 /.prettierignore
 /.prettierrc.json
 /.tool-versions
+/pnpm-workspace.yaml
