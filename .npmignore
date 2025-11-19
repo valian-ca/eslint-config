@@ -11,3 +11,4 @@
 /.prettierignore
 /.prettierrc.json
 /.tool-versions
+/pnpm-workspace.yaml
