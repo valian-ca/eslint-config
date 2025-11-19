@@ -1,31 +1,10 @@
+import { defineConfig } from 'eslint/config'
 import reactPlugin from 'eslint-plugin-react'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
 import eslintPluginReactRefresh from 'eslint-plugin-react-refresh'
 import globals from 'globals'
 
-export const react = [
-  {
-    ...reactPlugin.configs.flat.recommended,
-    languageOptions: {
-      ...reactPlugin.configs.flat.recommended.languageOptions,
-      globals: {
-        ...globals.serviceworker,
-        ...globals.browser,
-      },
-    },
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    rules: {
-      'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
-    },
-  },
-  {
-    files: ['**/*.d.ts'],
-    rules: {
-      'unicorn/filename-case': ['error', { cases: { kebabCase: true } }],
-    },
-  },
+export const react = defineConfig([
   {
     settings: {
       react: {
@@ -33,31 +12,24 @@ export const react = [
       },
     },
   },
-  reactPlugin.configs.flat['jsx-runtime'],
   {
-    plugins: {
-      'react-hooks': eslintPluginReactHooks,
+    files: ['**/*.{ts,tsx,jsx,js}'],
+    extends: [
+      reactPlugin.configs.flat.recommended,
+      reactPlugin.configs.flat['jsx-runtime'],
+      eslintPluginReactRefresh.configs.recommended,
+      eslintPluginReactHooks.configs.flat.recommended,
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.serviceworker,
+        ...globals.browser,
+        ...globals.node,
+      },
     },
     rules: {
-      ...eslintPluginReactHooks.configs.recommended.rules,
-    },
-  },
-  {
-    plugins: {
-      'react-refresh': eslintPluginReactRefresh,
-    },
-    rules: {
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    },
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    rules: {
-      '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { attributes: false } }],
-    },
-  },
-  {
-    rules: {
+      'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
+
       'react/jsx-props-no-spreading': 'off',
       'react/prop-types': 'off',
       'react/require-default-props': 'off',
@@ -86,6 +58,18 @@ export const react = [
       'react/no-unstable-nested-components': 'error',
     },
   },
-]
+  {
+    files: ['**/*.{ts,tsx}'],
+    rules: {
+      '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { attributes: false } }],
+    },
+  },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      'unicorn/filename-case': ['error', { cases: { kebabCase: true } }],
+    },
+  },
+])
 
 export default react

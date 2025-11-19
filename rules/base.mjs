@@ -1,6 +1,7 @@
 import eslintJavascript from '@eslint/js'
 import eslintPluginComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import confusingBrowserGlobals from 'confusing-browser-globals'
+import { defineConfig } from 'eslint/config'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import { flatConfigs as eslintPluginImportX } from 'eslint-plugin-import-x'
 // eslint-disable-next-line import-x/no-rename-default
@@ -9,7 +10,7 @@ import eslintPluginPromise from 'eslint-plugin-promise'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import globals from 'globals'
 
-export const base = [
+const baseJsConfigs = [
   eslintJavascript.configs.recommended,
   eslintPluginUnicorn.configs.all,
   eslintPluginPromise.configs['flat/recommended'],
@@ -285,31 +286,6 @@ export const base = [
     },
   },
   {
-    linterOptions: {
-      reportUnusedDisableDirectives: 'error',
-      reportUnusedInlineConfigs: 'error',
-    },
-  },
-  {
-    files: ['**/*.cjs'],
-    languageOptions: {
-      sourceType: 'commonjs',
-      globals: { ...globals.node },
-      parserOptions: {
-        ecmaVersion: 'latest',
-      },
-    },
-  },
-  {
-    files: ['**/*.mjs'],
-    languageOptions: {
-      sourceType: 'module',
-      parserOptions: {
-        ecmaVersion: 'latest',
-      },
-    },
-  },
-  {
     rules: {
       'unicorn/no-array-for-each': 'off',
       'unicorn/no-array-reduce': 'off',
@@ -344,5 +320,37 @@ export const base = [
   },
   eslintConfigPrettier,
 ]
+
+export const base = defineConfig([
+  {
+    files: ['**/*.{js,ts,jsx,tsx,mjs,cjs}'],
+    extends: [baseJsConfigs],
+  },
+  {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+      reportUnusedInlineConfigs: 'error',
+    },
+  },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: { ...globals.node },
+      parserOptions: {
+        ecmaVersion: 'latest',
+      },
+    },
+  },
+  {
+    files: ['**/*.mjs'],
+    languageOptions: {
+      sourceType: 'module',
+      parserOptions: {
+        ecmaVersion: 'latest',
+      },
+    },
+  },
+])
 
 export default base

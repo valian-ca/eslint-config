@@ -1,40 +1,26 @@
-// eslint-disable-next-line import-x/no-rename-default
-import jsonPlugin from '@eslint/json'
+import plugin from '@eslint/json'
+import { defineConfig } from 'eslint/config'
 
-export const json = [
+export const json = defineConfig([
   {
-    plugins: {
-      json: jsonPlugin,
-    },
     files: ['**/*.json'],
+    ignores: ['package-lock.json'],
+    plugins: { json: plugin },
     language: 'json/json',
-    rules: {
-      'json/no-duplicate-keys': 'error',
-      'json/no-empty-keys': 'error',
-    },
+    extends: ['json/recommended'],
   },
   {
-    plugins: {
-      json: jsonPlugin,
-    },
     files: ['**/*.jsonc'],
+    plugins: { json: plugin },
     language: 'json/jsonc',
-    rules: {
-      'json/no-duplicate-keys': 'error',
-      'json/no-empty-keys': 'error',
-    },
+    extends: ['json/recommended'],
   },
   {
-    plugins: {
-      json: jsonPlugin,
-    },
     files: ['**/*.json5'],
+    plugins: { json: plugin },
     language: 'json/json5',
-    rules: {
-      'json/no-duplicate-keys': 'error',
-      'json/no-empty-keys': 'error',
-    },
+    extends: ['json/recommended'],
   },
-]
+])
 
 export default json
