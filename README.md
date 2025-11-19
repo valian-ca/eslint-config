@@ -92,7 +92,7 @@ This package uses ESLint's new flat configuration system (ESLint v9+). Create an
 ### Basic Configuration
 
 ```js
-// eslint.config.js
+// eslint.config.mjs
 import { defineConfig } from 'eslint/config'
 import { base } from '@valian/eslint-config'
 
@@ -111,26 +111,19 @@ export default defineConfig([
 ### Node.js TypeScript App Configuration
 
 ```js
-// eslint.config.js
+// eslint.config.mjs
 import { defineConfig } from 'eslint/config'
 import { base } from '@valian/eslint-config'
-import { typescript } from '@valian/eslint-config/typescript'
-import { importSort } from '@valian/eslint-config/importSort'
+import { importSort } from '@valian/eslint-config/import-sort'
+import { json } from '@valian/eslint-config/json'
 import { node } from '@valian/eslint-config/node'
 
 export default defineConfig([
   ...base,
-  ...typescript,
   ...importSort,
   ...node,
+  ...json,
   {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
     linterOptions: {
       reportUnusedDisableDirectives: true,
     },
@@ -141,19 +134,23 @@ export default defineConfig([
 ### React TypeScript App Configuration
 
 ```js
-// eslint.config.js
-import { defineConfig } from 'eslint/config'
+// eslint.config.mjs
 import { base } from '@valian/eslint-config'
-import { typescript } from '@valian/eslint-config/typescript'
-import { importSort } from '@valian/eslint-config/importSort'
+import { importSort } from '@valian/eslint-config/import-sort'
+import { json } from '@valian/eslint-config/json'
 import { react } from '@valian/eslint-config/react'
+import { storybook } from '@valian/eslint-config/storybook'
+import { typescript } from '@valian/eslint-config/typescript'
 import { zod } from '@valian/eslint-config/zod'
+import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
   ...base,
   ...typescript,
   ...importSort,
   ...react,
+  ...json,
+  ...storybook,
   ...zod,
   {
     files: ['**/*.{ts,tsx}'],
