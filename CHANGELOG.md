@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.4
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.3...v2.0.4)
+
+### 🏡 Chore
+
+- Add dts ([a95948e](https://github.com/valian-ca/eslint-config/commit/a95948e))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v2.0.3
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.2...v2.0.3)
