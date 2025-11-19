@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v2.0.2
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.1...v2.0.2)
+
+### 🏡 Chore
+
+- Publish workflow ([#168](https://github.com/valian-ca/eslint-config/pull/168))
+- Apply agents proposed change ([#167](https://github.com/valian-ca/eslint-config/pull/167))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v2.0.1
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.0...v2.0.1)
