@@ -1,13 +1,13 @@
-// eslint-disable-next-line import-x/no-rename-default
-import vitestPlugin from '@vitest/eslint-plugin'
+import plugin from '@vitest/eslint-plugin'
+import { defineConfig } from 'eslint/config'
 
 import { testFiles } from './test-files.mjs'
 
-export const vitest = [
+export const vitest = defineConfig([
   {
     files: testFiles,
-    ...vitestPlugin.configs.recommended,
+    ...plugin.configs.recommended,
   },
-]
+])
 
 export default vitest

@@ -8,7 +8,7 @@ export default [
   ...importTypescript,
   ...config.importSort,
   ...config.node,
-  ...config.zod,
+  ...config.json,
   {
     files: ['**/*.js'],
     languageOptions: {
