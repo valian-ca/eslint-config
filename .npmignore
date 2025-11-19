@@ -2,6 +2,7 @@
 .editorconfig
 .husky/*
 .vscode/*
+AGENTS.md
 /commitlint.config.mjs
 /dist/changelog.md
 /dist/version.txt

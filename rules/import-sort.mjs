@@ -1,7 +1,9 @@
+import { defineConfig } from 'eslint/config'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 
-export const importSort = [
+export const importSort = defineConfig([
   {
+    name: 'valian/import-sort',
     plugins: {
       'simple-import-sort': simpleImportSort,
     },
@@ -33,6 +35,6 @@ export const importSort = [
       ],
     },
   },
-]
+])
 
 export default importSort

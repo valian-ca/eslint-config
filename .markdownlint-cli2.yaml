@@ -6,3 +6,4 @@ config:
   MD040: false
 ignores:
   - CHANGELOG.md
+  - AGENTS.md

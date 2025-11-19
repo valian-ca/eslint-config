@@ -1,36 +1,37 @@
+import { defineConfig } from 'eslint/config'
 import { flatConfigs as importXConfigs } from 'eslint-plugin-import-x'
 import { configs as tsConfigs } from 'typescript-eslint'
 
-import { testFiles } from './test-files.mjs'
-
-export const importTypescript = [
+export const importTypescript = defineConfig([
   importXConfigs.typescript,
   {
+    name: 'valian/typescript/import-config',
     files: ['**/*.{ts,tsx,cts,mts}'],
     languageOptions: {
       parser: '@typescript-eslint/parser',
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
-    rules: {
-      'no-unused-vars': 'off',
-    },
     settings: {
       'import-x/resolver': 'eslint-import-resolver-typescript',
     },
+    rules: {
+      'no-unused-vars': 'off',
+    },
   },
-]
+])
 
-export const typescript = [
+export const typescript = defineConfig([
   ...importTypescript,
-  ...tsConfigs.strictTypeChecked.map((config) => ({ files: ['**/*.{ts,tsx}'], ...config })),
-  ...tsConfigs.stylisticTypeChecked.map((config) => ({ files: ['**/*.{ts,tsx}'], ...config })),
   {
-    files: ['**/*.{js,mjs,cjs,jsx}'],
-    ...tsConfigs.disableTypeChecked,
-  },
-  {
+    name: 'valian/typescript/type-checked',
     files: ['**/*.{ts,tsx,cts,mts}'],
+    extends: [tsConfigs.strictTypeChecked, tsConfigs.stylisticTypeChecked],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
     rules: {
       '@typescript-eslint/no-unused-vars': [
         'error',
@@ -81,7 +82,8 @@ export const typescript = [
     },
   },
   {
-    files: testFiles,
+    name: 'valian/typescript/test-files',
+    files: ['**/*.test.ts', '**/*.test.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
     rules: {
       '@typescript-eslint/no-unsafe-argument': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
@@ -91,11 +93,12 @@ export const typescript = [
     },
   },
   {
+    name: 'valian/typescript/dts',
     files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/consistent-type-definitions': 'off',
     },
   },
-]
+])
 
 export default typescript

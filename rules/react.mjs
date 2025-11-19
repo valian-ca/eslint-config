@@ -6,6 +6,7 @@ import globals from 'globals'
 
 export const react = defineConfig([
   {
+    name: 'valian/react/settings',
     settings: {
       react: {
         version: 'detect',
@@ -13,6 +14,7 @@ export const react = defineConfig([
     },
   },
   {
+    name: 'valian/react/base',
     files: ['**/*.{ts,tsx,jsx,js}'],
     extends: [
       reactPlugin.configs.flat.recommended,
@@ -59,12 +61,14 @@ export const react = defineConfig([
     },
   },
   {
+    name: 'valian/react/typescript',
     files: ['**/*.{ts,tsx}'],
     rules: {
       '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { attributes: false } }],
     },
   },
   {
+    name: 'valian/react/dts',
     files: ['**/*.d.ts'],
     rules: {
       'unicorn/filename-case': ['error', { cases: { kebabCase: true } }],
