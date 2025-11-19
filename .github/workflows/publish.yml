@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     tags:
-      - v*.*.*
+      - 'v*'
 
 permissions:
   id-token: write
@@ -14,17 +14,20 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - name: setup pnpm
-        uses: valian-ca/github-workflows/.github/actions/setup-pnpm@main
-
-      - name: Set publishing config
-        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          registry-url: 'https://registry.npmjs.org'
+          node-version-file: .tool-versions
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+        shell: sh
       - name: Publish to NPM
+        run: pnpm publish --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
-        run: pnpm publish

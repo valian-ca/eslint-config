@@ -20,7 +20,7 @@
     "eslint": "eslint .",
     "prettier": "prettier --check .",
     "lint:md": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
-    "bump": "npx changelogen@latest --release --bump",
+    "bump": "npx changelogen@latest --release --bump --push --clean",
     "prepare": "husky"
   },
   "devDependencies": {
