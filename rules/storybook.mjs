@@ -2,6 +2,7 @@
 import storybookPlugin from 'eslint-plugin-storybook'
 
 export const storybook = [
+  // eslint-disable-next-line import-x/no-named-as-default-member
   ...storybookPlugin.configs['flat/recommended'],
   {
     files: ['**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)'],
