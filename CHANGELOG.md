@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v2.0.1
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.0...v2.0.1)
+
+### 🩹 Fixes
+
+- **deps:** Update eslint ([#160](https://github.com/valian-ca/eslint-config/pull/160))
+
+### 🏡 Chore
+
+- Update README ([#165](https://github.com/valian-ca/eslint-config/pull/165))
+- Improve config with eslint defineConfig ([#166](https://github.com/valian-ca/eslint-config/pull/166))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v2.0.0
 
 
