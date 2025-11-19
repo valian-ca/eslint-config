@@ -75,18 +75,54 @@
     "node": ">= 20"
   },
   "exports": {
-    ".": "./index.mjs",
-    "./base": "./rules/base.mjs",
-    "./import-sort": "./rules/import-sort.mjs",
-    "./no-cycle": "./rules/no-cycle.mjs",
-    "./json": "./rules/json.mjs",
-    "./jest": "./rules/jest.mjs",
-    "./node": "./rules/node.mjs",
-    "./react": "./rules/react.mjs",
-    "./storybook": "./rules/storybook.mjs",
-    "./typescript": "./rules/typescript.mjs",
-    "./vitest": "./rules/vitest.mjs",
-    "./zod": "./rules/zod.mjs"
+    ".": {
+      "types": "./dts/index.d.ts",
+      "import": "./index.mjs"
+    },
+    "./base": {
+      "types": "./dts/base.d.ts",
+      "import": "./rules/base.mjs"
+    },
+    "./import-sort": {
+      "types": "./dts/import-sort.d.ts",
+      "import": "./rules/import-sort.mjs"
+    },
+    "./no-cycle": {
+      "types": "./dts/no-cycle.d.ts",
+      "import": "./rules/no-cycle.mjs"
+    },
+    "./json": {
+      "types": "./dts/json.d.ts",
+      "import": "./rules/json.mjs"
+    },
+    "./jest": {
+      "types": "./dts/jest.d.ts",
+      "import": "./rules/jest.mjs"
+    },
+    "./node": {
+      "types": "./dts/node.d.ts",
+      "import": "./rules/node.mjs"
+    },
+    "./react": {
+      "types": "./dts/react.d.ts",
+      "import": "./rules/react.mjs"
+    },
+    "./storybook": {
+      "types": "./dts/storybook.d.ts",
+      "import": "./rules/storybook.mjs"
+    },
+    "./typescript": {
+      "types": "./dts/typescript.d.ts",
+      "import": "./rules/typescript.mjs"
+    },
+    "./vitest": {
+      "types": "./dts/vitest.d.ts",
+      "import": "./rules/vitest.mjs"
+    },
+    "./zod": {
+      "types": "./dts/zod.d.ts",
+      "import": "./rules/zod.mjs"
+    }
   },
   "type": "module",
   "main": "index.mjs",
