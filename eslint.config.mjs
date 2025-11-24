@@ -1,32 +1,17 @@
 import { defineConfig } from 'eslint/config'
-import globals from 'globals'
 
-import { importTypescript } from './rules/typescript.mjs'
 import { config } from './index.mjs'
 
 export default defineConfig([
   ...config.base,
-  ...importTypescript,
+  ...config.typescript,
   ...config.importSort,
   ...config.node,
   ...config.json,
   {
-    files: ['**/*.js'],
-    languageOptions: {
-      sourceType: 'commonjs',
-      globals: { ...globals.node },
-      parserOptions: {
-        ecmaVersion: 'latest',
-      },
-    },
-    rules: {
-      'unicorn/prefer-module': 'off',
-    },
-  },
-  {
     files: ['**/*.mjs'],
     rules: {
-      'import-x/default': 'off',
+      'import-x/no-rename-default': 'off',
     },
   },
 ])

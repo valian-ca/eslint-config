@@ -20,12 +20,13 @@
     "eslint": "eslint .",
     "prettier": "prettier --check .",
     "lint:md": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
-    "bump": "npx changelogen@latest --release --bump --push --clean",
+    "bump": "npx changelogen@latest --release --bump --push --no-tag --clean",
     "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
+    "@tsconfig/node22": "22.0.5",
     "eslint": "^9.39.1",
     "husky": "^9.1.7",
     "markdownlint-cli2": "^0.18.1",

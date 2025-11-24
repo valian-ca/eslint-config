@@ -20,7 +20,7 @@ export const react = defineConfig([
       reactPlugin.configs.flat.recommended,
       reactPlugin.configs.flat['jsx-runtime'],
       eslintPluginReactRefresh.configs.recommended,
-      eslintPluginReactHooks.configs.flat.recommended,
+      eslintPluginReactHooks.configs.flat['recommended-latest'],
     ],
     languageOptions: {
       globals: {

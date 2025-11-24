@@ -1,5 +1,4 @@
 import { defineConfig } from 'eslint/config'
-// eslint-disable-next-line import-x/no-rename-default
 import storybookPlugin from 'eslint-plugin-storybook'
 
 export const storybook = defineConfig([

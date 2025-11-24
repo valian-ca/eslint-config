@@ -1,38 +1,24 @@
 import { defineConfig } from 'eslint/config'
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 import { flatConfigs as importXConfigs } from 'eslint-plugin-import-x'
 import { configs as tsConfigs } from 'typescript-eslint'
 
-export const importTypescript = defineConfig([
-  importXConfigs.typescript,
-  {
-    name: 'valian/typescript/import-config',
-    files: ['**/*.{ts,tsx,cts,mts}'],
-    languageOptions: {
-      parser: '@typescript-eslint/parser',
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    },
-    settings: {
-      'import-x/resolver': 'eslint-import-resolver-typescript',
-    },
-    rules: {
-      'no-unused-vars': 'off',
-    },
-  },
-])
-
 export const typescript = defineConfig([
-  ...importTypescript,
   {
     name: 'valian/typescript/type-checked',
-    files: ['**/*.{ts,tsx,cts,mts}'],
-    extends: [tsConfigs.strictTypeChecked, tsConfigs.stylisticTypeChecked],
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+    extends: [importXConfigs.typescript, tsConfigs.strictTypeChecked, tsConfigs.stylisticTypeChecked],
+    settings: {
+      'import-x/resolver-next': [createTypeScriptImportResolver()],
+    },
     languageOptions: {
       parserOptions: {
         projectService: true,
       },
     },
     rules: {
+      'no-unused-vars': 'off',
+
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -79,6 +65,22 @@ export const typescript = defineConfig([
         'error',
         { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
       ],
+
+      'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
+      'import-x/extensions': [
+        'error',
+        'always',
+        {
+          mjs: 'never',
+          mts: 'never',
+          cjs: 'never',
+          cts: 'never',
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
+      ],
     },
   },
   {
@@ -104,6 +106,8 @@ export const typescript = defineConfig([
     files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/consistent-type-definitions': 'off',
+
+      'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     },
   },
 ])
