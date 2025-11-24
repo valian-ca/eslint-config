@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.5
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.4...v2.0.5)
+
+### 🏡 Chore
+
+- Use eslint-plugin-react-hooks recommended-latest ([#169](https://github.com/valian-ca/eslint-config/pull/169))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v2.0.4
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.3...v2.0.4)
