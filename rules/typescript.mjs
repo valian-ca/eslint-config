@@ -3,6 +3,84 @@ import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescrip
 import { flatConfigs as importXConfigs } from 'eslint-plugin-import-x'
 import { configs as tsConfigs } from 'typescript-eslint'
 
+export const simpleTypescript = defineConfig([
+  {
+    name: 'valian/typescript/simple-type-checked',
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+    extends: [importXConfigs.typescript, tsConfigs.strict, tsConfigs.stylistic],
+    settings: {
+      'import-x/resolver-next': [createTypeScriptImportResolver()],
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      'default-case': 'off',
+
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
+
+      '@typescript-eslint/no-non-null-assertion': 'warn',
+      '@typescript-eslint/no-empty-function': 'warn',
+
+      '@typescript-eslint/no-invalid-void-type': ['error', { allowAsThisParameter: true }],
+      '@typescript-eslint/array-type': ['error', { default: 'array-simple', readonly: 'generic' }],
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
+      ],
+
+      'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
+      'import-x/extensions': [
+        'error',
+        'always',
+        {
+          mjs: 'never',
+          mts: 'never',
+          cjs: 'never',
+          cts: 'never',
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
+      ],
+    },
+  },
+  {
+    name: 'valian/typescript/test-files',
+    files: [
+      '**/__tests__/**/*.{ts,tsx}',
+      '**/__mocks__/**/*.{ts,tsx}',
+      '**/*.test.ts',
+      '**/*.test.tsx',
+      '**/*.spec.ts',
+      '**/*.spec.tsx',
+    ],
+    rules: {
+      '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/unbound-method': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+    },
+  },
+  {
+    name: 'valian/typescript/dts',
+    files: ['**/*.d.ts'],
+    rules: {
+      '@typescript-eslint/consistent-type-definitions': 'off',
+
+      'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+    },
+  },
+])
+
 export const typescript = defineConfig([
   {
     name: 'valian/typescript/type-checked',
