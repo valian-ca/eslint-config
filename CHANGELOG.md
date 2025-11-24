@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.0.6
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.5...v2.0.6)
+
+### 🏡 Chore
+
+- Expose simpleTypescript for typescript heavy projects ([#170](https://github.com/valian-ca/eslint-config/pull/170))
+
+### ❤️ Contributors
+
+- Julien Marcil <julien@valian.ca>
+
 ## v2.0.5
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.4...v2.0.5)
