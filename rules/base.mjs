@@ -4,7 +4,6 @@ import confusingBrowserGlobals from 'confusing-browser-globals'
 import { defineConfig } from 'eslint/config'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 import { flatConfigs as eslintPluginImportX } from 'eslint-plugin-import-x'
-// eslint-disable-next-line import-x/no-rename-default
 import eslintPluginNoUseExtendNative from 'eslint-plugin-no-use-extend-native'
 import eslintPluginPromise from 'eslint-plugin-promise'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
@@ -294,21 +293,8 @@ const baseJsConfigs = [
 
       'unicorn/switch-case-braces': ['error', 'avoid'],
 
-      'import-x/extensions': [
-        'error',
-        'always',
-        {
-          mjs: 'never',
-          cjs: 'never',
-          js: 'never',
-          jsx: 'never',
-          ts: 'never',
-          tsx: 'never',
-        },
-      ],
       'import-x/no-self-import': 'error',
       'import-x/no-useless-path-segments': 'error',
-      'import-x/consistent-type-specifier-style': ['error', 'prefer-inline'],
       'import-x/first': 'error',
       'import-x/no-relative-packages': 'error',
     },
