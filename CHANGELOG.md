@@ -1,6 +1,15 @@
 # Changelog
 
 
+## v2.0.7
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.6...v2.0.7)
+
+### 🩹 Fixes
+
+- **deps:** Replace node-based dev tools ([#172](https://github.com/valian-ca/eslint-config/pull/172))
+- **deps:** Update dependency eslint-plugin-zod-x to v2 ([#175](https://github.com/valian-ca/eslint-config/pull/175))
+
 ## v2.0.6
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.5...v2.0.6)
