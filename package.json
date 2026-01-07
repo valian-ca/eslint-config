@@ -26,7 +26,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "@tsconfig/node24": "24.0.0",
+    "@tsconfig/node24": "24.0.3",
     "eslint": "^9.39.1",
     "husky": "^9.1.7",
     "markdownlint-cli2": "^0.20.0",
