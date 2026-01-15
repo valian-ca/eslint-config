@@ -1,8 +1,8 @@
 import { defineConfig } from 'eslint/config'
-import eslintPluginZodX from 'eslint-plugin-zod'
+import eslintPluginZod from 'eslint-plugin-zod'
 
 export const zod = defineConfig([
-  eslintPluginZodX.configs.recommended,
+  eslintPluginZod.configs.recommended,
   {
     name: 'valian/zod/custom',
     files: ['**/*.{ts,tsx}'],
