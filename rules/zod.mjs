@@ -1,5 +1,5 @@
 import { defineConfig } from 'eslint/config'
-import eslintPluginZodX from 'eslint-plugin-zod-x'
+import eslintPluginZodX from 'eslint-plugin-zod'
 
 export const zod = defineConfig([
   eslintPluginZodX.configs.recommended,
@@ -7,8 +7,8 @@ export const zod = defineConfig([
     name: 'valian/zod/custom',
     files: ['**/*.{ts,tsx}'],
     rules: {
-      'zod-x/require-schema-suffix': ['error', { suffix: 'Zod' }],
-      'zod-x/array-style': ['error', { style: 'method' }],
+      'zod/require-schema-suffix': ['error', { suffix: 'Zod' }],
+      'zod/array-style': ['error', { style: 'method' }],
     },
   },
 ])
