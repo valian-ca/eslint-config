@@ -24,15 +24,15 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.3.1",
-    "@commitlint/config-conventional": "^20.3.1",
-    "@tsconfig/node24": "24.0.3",
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
+    "@tsconfig/node24": "24.0.6",
     "eslint": "^9.39.2",
     "husky": "^9.1.7",
-    "markdownlint-cli2": "^0.20.0",
+    "markdownlint-cli2": "^0.24.0",
     "prettier": "^3.8.0",
     "publint": "^0.3.16",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.0"
   },
   "peerDependencies": {
     "eslint": ">=9.35.0",
