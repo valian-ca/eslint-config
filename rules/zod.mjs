@@ -8,6 +8,7 @@ export const zod = defineConfig([
     files: ['**/*.{ts,tsx}'],
     rules: {
       'zod/require-schema-suffix': ['error', { suffix: 'Zod' }],
+      'zod/consistent-schema-var-name': ['error', { after: 'Zod' }],
       'zod/array-style': ['error', { style: 'method' }],
     },
   },
