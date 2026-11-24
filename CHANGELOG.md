@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v2.1.1
+
+[compare changes](https://github.com/valian-ca/eslint-config/compare/v2.1.0...v2.1.1)
+
+### 🩹 Fixes
+
+- **zod:** Align schema name rules on Zod suffix ([#186](https://github.com/valian-ca/eslint-config/pull/186))
+
+### ❤️ Contributors
+
+- John Martel ([@johnmartel](https://github.com/johnmartel))
+
 ## v2.1.0
 
 [compare changes](https://github.com/valian-ca/eslint-config/compare/v2.0.7...v2.1.0)
